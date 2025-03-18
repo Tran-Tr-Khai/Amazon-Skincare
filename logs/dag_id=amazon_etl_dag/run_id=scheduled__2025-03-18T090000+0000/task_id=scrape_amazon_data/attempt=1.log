@@ -1,0 +1,141 @@
+[2025-03-18T10:00:04.235+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-18T10:00:04.275+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: amazon_etl_dag.scrape_amazon_data scheduled__2025-03-18T09:00:00+00:00 [queued]>
+[2025-03-18T10:00:04.282+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: amazon_etl_dag.scrape_amazon_data scheduled__2025-03-18T09:00:00+00:00 [queued]>
+[2025-03-18T10:00:04.283+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-18T10:00:04.294+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): scrape_amazon_data> on 2025-03-18 09:00:00+00:00
+[2025-03-18T10:00:04.319+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'amazon_etl_dag', 'scrape_amazon_data', 'scheduled__2025-03-18T09:00:00+00:00', '--job-id', '266', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmp2rr3ojs4']
+[2025-03-18T10:00:04.321+0000] {standard_task_runner.py:91} INFO - Job 266: Subtask scrape_amazon_data
+[2025-03-18T10:00:04.323+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=91249) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-18T10:00:04.324+0000] {standard_task_runner.py:63} INFO - Started process 91334 to run task
+[2025-03-18T10:00:04.362+0000] {task_command.py:426} INFO - Running <TaskInstance: amazon_etl_dag.scrape_amazon_data scheduled__2025-03-18T09:00:00+00:00 [running]> on host 23e83e453497
+[2025-03-18T10:00:04.441+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='amazon_etl_dag' AIRFLOW_CTX_TASK_ID='scrape_amazon_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T09:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-18T09:00:00+00:00'
+[2025-03-18T10:00:04.443+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-18T10:00:04.445+0000] {scrape.py:182} INFO - Scraping page 1
+[2025-03-18T10:00:07.577+0000] {scrape.py:60} INFO - Initialized new WebDriver
+[2025-03-18T10:00:20.797+0000] {scrape.py:88} INFO - Total products found after scrolling: 0
+[2025-03-18T10:00:20.937+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Best-Sellers-Beauty-Personal-Care-Skin-Care-Products/zgbs/beauty/11060451/ref=zg_bs_nav_beauty_1?pg=1
+[2025-03-18T10:00:20.948+0000] {scrape.py:140} INFO - Scraped 50 products from page 1
+[2025-03-18T10:00:23.224+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Mighty-Patch-Hydrocolloid-Absorbing-count/dp/B074PVTPBW/ref=zg_bs_g_11060451_d_sccl_1/137-1423189-1835638?psc=1
+[2025-03-18T10:00:23.229+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Mighty-Patch-Hydrocolloid-Absorbing-count/dp/B074PVTPBW/ref=zg_bs_g_11060451_d_sccl_1/137-1423189-1835638?psc=1
+[2025-03-18T10:00:32.603+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Mighty-Patch-Hydrocolloid-Absorbing-count/dp/B074PVTPBW/ref=zg_bs_g_11060451_d_sccl_1/137-1423189-1835638?psc=1
+[2025-03-18T10:00:32.617+0000] {scrape.py:198} INFO - Scraped details for product B074PVTPBW
+[2025-03-18T10:00:44.167+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Clean-Skin-Club-Disposable-Sensitive/dp/B07PBXXNCY/ref=zg_bs_g_11060451_d_sccl_2/137-1423189-1835638?psc=1
+[2025-03-18T10:00:44.179+0000] {scrape.py:198} INFO - Scraped details for product B07PBXXNCY
+[2025-03-18T10:00:53.981+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/eos-Cashmere-Moisture-Lightweight-Non-Greasy/dp/B08KT2Z93D/ref=zg_bs_g_11060451_d_sccl_3/137-1423189-1835638?psc=1
+[2025-03-18T10:00:53.982+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/eos-Cashmere-Moisture-Lightweight-Non-Greasy/dp/B08KT2Z93D/ref=zg_bs_g_11060451_d_sccl_3/137-1423189-1835638?psc=1
+[2025-03-18T10:01:03.139+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/eos-Cashmere-Moisture-Lightweight-Non-Greasy/dp/B08KT2Z93D/ref=zg_bs_g_11060451_d_sccl_3/137-1423189-1835638?psc=1
+[2025-03-18T10:01:03.153+0000] {scrape.py:198} INFO - Scraped details for product B08KT2Z93D
+[2025-03-18T10:01:12.114+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Neutrogena-Cleansing-Towelettes-Waterproof-Alcohol-Free/dp/B00U2VQZDS/ref=zg_bs_g_11060451_d_sccl_4/137-1423189-1835638?psc=1
+[2025-03-18T10:01:12.115+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Neutrogena-Cleansing-Towelettes-Waterproof-Alcohol-Free/dp/B00U2VQZDS/ref=zg_bs_g_11060451_d_sccl_4/137-1423189-1835638?psc=1
+[2025-03-18T10:01:21.783+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Neutrogena-Cleansing-Towelettes-Waterproof-Alcohol-Free/dp/B00U2VQZDS/ref=zg_bs_g_11060451_d_sccl_4/137-1423189-1835638?psc=1
+[2025-03-18T10:01:21.797+0000] {scrape.py:198} INFO - Scraped details for product B00U2VQZDS
+[2025-03-18T10:01:27.537+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Medicube-Zero-Pore-Pads-Dual-Textured/dp/B09V7Z4TJG/ref=zg_bs_g_11060451_d_sccl_5/137-1423189-1835638?psc=1
+[2025-03-18T10:01:27.539+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Medicube-Zero-Pore-Pads-Dual-Textured/dp/B09V7Z4TJG/ref=zg_bs_g_11060451_d_sccl_5/137-1423189-1835638?psc=1
+[2025-03-18T10:01:37.617+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Medicube-Zero-Pore-Pads-Dual-Textured/dp/B09V7Z4TJG/ref=zg_bs_g_11060451_d_sccl_5/137-1423189-1835638?psc=1
+[2025-03-18T10:01:37.631+0000] {scrape.py:198} INFO - Scraped details for product B09V7Z4TJG
+[2025-03-18T10:01:43.441+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Biodance-Bio-Collagen-Tightening-Hydrating-Molecular/dp/B0B2RM68G2/ref=zg_bs_g_11060451_d_sccl_6/137-1423189-1835638?psc=1
+[2025-03-18T10:01:43.443+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Biodance-Bio-Collagen-Tightening-Hydrating-Molecular/dp/B0B2RM68G2/ref=zg_bs_g_11060451_d_sccl_6/137-1423189-1835638?psc=1
+[2025-03-18T10:01:58.067+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Biodance-Bio-Collagen-Tightening-Hydrating-Molecular/dp/B0B2RM68G2/ref=zg_bs_g_11060451_d_sccl_6/137-1423189-1835638?psc=1
+[2025-03-18T10:01:58.082+0000] {scrape.py:198} INFO - Scraped details for product B0B2RM68G2
+[2025-03-18T10:02:08.175+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/PanOxyl-Foaming-Peroxide-Strength-Antimicrobial/dp/B081KL2QYJ/ref=zg_bs_g_11060451_d_sccl_7/137-1423189-1835638?psc=1
+[2025-03-18T10:02:08.185+0000] {scrape.py:198} INFO - Scraped details for product B081KL2QYJ
+[2025-03-18T10:02:16.705+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Toleriane-Double-Repair-Moisturizer/dp/B01N9SPQHQ/ref=zg_bs_g_11060451_d_sccl_8/137-1423189-1835638?psc=1
+[2025-03-18T10:02:16.713+0000] {scrape.py:198} INFO - Scraped details for product B01N9SPQHQ
+[2025-03-18T10:02:23.033+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dove-Body-Wash-Pump-Moisture/dp/B00MEDOY2G/ref=zg_bs_g_11060451_d_sccl_9/137-1423189-1835638?psc=1
+[2025-03-18T10:02:23.034+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Dove-Body-Wash-Pump-Moisture/dp/B00MEDOY2G/ref=zg_bs_g_11060451_d_sccl_9/137-1423189-1835638?psc=1
+[2025-03-18T10:02:32.554+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Dove-Body-Wash-Pump-Moisture/dp/B00MEDOY2G/ref=zg_bs_g_11060451_d_sccl_9/137-1423189-1835638?psc=1
+[2025-03-18T10:02:32.570+0000] {scrape.py:198} INFO - Scraped details for product B00MEDOY2G
+[2025-03-18T10:02:40.698+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Ordinary-Exfoliating-Brightening-Smoothing-Even-Looking/dp/B071914GGL/ref=zg_bs_g_11060451_d_sccl_10/137-1423189-1835638?psc=1
+[2025-03-18T10:02:40.707+0000] {scrape.py:198} INFO - Scraped details for product B071914GGL
+[2025-03-18T10:02:50.845+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/MRS-MEYERS-CLEAN-DAY-Biodegradable/dp/B07MFMWFYL/ref=zg_bs_g_11060451_d_sccl_11/137-1423189-1835638?psc=1
+[2025-03-18T10:02:50.858+0000] {scrape.py:198} INFO - Scraped details for product B07MFMWFYL
+[2025-03-18T10:03:00.843+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Valitic-Remover-Vitamin-Collagen-Turmeric/dp/B09MFMCTRK/ref=zg_bs_g_11060451_d_sccl_12/137-1423189-1835638?psc=1
+[2025-03-18T10:03:00.856+0000] {scrape.py:198} INFO - Scraped details for product B09MFMCTRK
+[2025-03-18T10:03:10.402+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Moisturizing-Cream-Daily-Moisturizer/dp/B00TTD9BRC/ref=zg_bs_g_11060451_d_sccl_13/137-1423189-1835638?psc=1
+[2025-03-18T10:03:10.415+0000] {scrape.py:198} INFO - Scraped details for product B00TTD9BRC
+[2025-03-18T10:03:22.378+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/COSRX-Repairing-Hydrating-Secretion-Phthalates/dp/B00PBX3L7K/ref=zg_bs_g_11060451_d_sccl_14/137-1423189-1835638?psc=1
+[2025-03-18T10:03:22.393+0000] {scrape.py:198} INFO - Scraped details for product B00PBX3L7K
+[2025-03-18T10:03:32.980+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Moisturizing-Lotion-Hyaluronic-Fragrance/dp/B000YJ2SLG/ref=zg_bs_g_11060451_d_sccl_15/137-1423189-1835638?psc=1
+[2025-03-18T10:03:32.994+0000] {scrape.py:198} INFO - Scraped details for product B000YJ2SLG
+[2025-03-18T10:03:42.715+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Medicube-Collagen-Wrapping-Elasticity-Hydration/dp/B0BRMYHMS5/ref=zg_bs_g_11060451_d_sccl_16/137-1423189-1835638?psc=1
+[2025-03-18T10:03:42.727+0000] {scrape.py:198} INFO - Scraped details for product B0BRMYHMS5
+[2025-03-18T10:03:54.498+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Paulas-Choice-SKIN-PERFECTING-Exfoliant-Facial-Blackheads/dp/B00949CTQQ/ref=zg_bs_g_11060451_d_sccl_17/137-1423189-1835638?psc=1
+[2025-03-18T10:03:54.507+0000] {scrape.py:198} INFO - Scraped details for product B00949CTQQ
+[2025-03-18T10:04:07.543+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Hydrating-Facial-Cleanser-Fragrance/dp/B01MSSDEPK/ref=zg_bs_g_11060451_d_sccl_18/137-1423189-1835638?psc=1
+[2025-03-18T10:04:07.556+0000] {scrape.py:198} INFO - Scraped details for product B01MSSDEPK
+[2025-03-18T10:04:18.080+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Ordinary-Hyaluronic-Acid-2-30ml/dp/B01MYEZPC8/ref=zg_bs_g_11060451_d_sccl_19/137-1423189-1835638?psc=1
+[2025-03-18T10:04:18.096+0000] {scrape.py:198} INFO - Scraped details for product B01MYEZPC8
+[2025-03-18T10:04:27.565+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ/ref=zg_bs_g_11060451_d_sccl_20/137-1423189-1835638?psc=1
+[2025-03-18T10:04:27.583+0000] {scrape.py:198} INFO - Scraped details for product B002MSN3QQ
+[2025-03-18T10:04:40.107+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dove-Hypoallergenic-Paraben-Free-Sulfate-Free-Cruelty-Free/dp/B00SK71SAG/ref=zg_bs_g_11060451_d_sccl_21/137-1423189-1835638?psc=1
+[2025-03-18T10:04:40.119+0000] {scrape.py:198} INFO - Scraped details for product B00SK71SAG
+[2025-03-18T10:04:52.791+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/MRS-MEYERS-CLEAN-DAY-Biodegradable/dp/B07TJG79HP/ref=zg_bs_g_11060451_d_sccl_22/137-1423189-1835638?psc=1
+[2025-03-18T10:04:52.804+0000] {scrape.py:198} INFO - Scraped details for product B07TJG79HP
+[2025-03-18T10:05:05.772+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-Lightweight/dp/B00365DABC/ref=zg_bs_g_11060451_d_sccl_23/137-1423189-1835638?psc=1
+[2025-03-18T10:05:05.785+0000] {scrape.py:198} INFO - Scraped details for product B00365DABC
+[2025-03-18T10:05:14.801+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Under-Eye-Patches-Gold-24-Pairs/dp/B014E2D6BY/ref=zg_bs_g_11060451_d_sccl_24/137-1423189-1835638?psc=1
+[2025-03-18T10:05:14.814+0000] {scrape.py:198} INFO - Scraped details for product B014E2D6BY
+[2025-03-18T10:05:26.049+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Foaming-Facial-Cleanser-Washing/dp/B01N1LL62W/ref=zg_bs_g_11060451_d_sccl_25/137-1423189-1835638?psc=1
+[2025-03-18T10:05:26.068+0000] {scrape.py:198} INFO - Scraped details for product B01N1LL62W
+[2025-03-18T10:05:38.077+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Toleriane-Purifying-Sensitive-Niacinamide/dp/B01N34XW93/ref=zg_bs_g_11060451_d_sccl_26/137-1423189-1835638?psc=1
+[2025-03-18T10:05:38.087+0000] {scrape.py:198} INFO - Scraped details for product B01N34XW93
+[2025-03-18T10:05:48.016+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Skin-Renewing-Night-Cream/dp/B00SNPCSUY/ref=zg_bs_g_11060451_d_sccl_27/137-1423189-1835638?psc=1
+[2025-03-18T10:05:48.028+0000] {scrape.py:198} INFO - Scraped details for product B00SNPCSUY
+[2025-03-18T10:06:00.007+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Face-Moisturizer-Collagen-Cream-Moisturizing/dp/B0BBSP2JNQ/ref=zg_bs_g_11060451_d_sccl_28/137-1423189-1835638?psc=1
+[2025-03-18T10:06:00.021+0000] {scrape.py:198} INFO - Scraped details for product B0BBSP2JNQ
+[2025-03-18T10:06:12.872+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Tree-Hut-Variety-Strawberry-Champaine/dp/B0BX2TZZWG/ref=zg_bs_g_11060451_d_sccl_29/137-1423189-1835638?psc=1
+[2025-03-18T10:06:12.885+0000] {scrape.py:198} INFO - Scraped details for product B0BX2TZZWG
+[2025-03-18T10:06:20.948+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Ordinary-Niacinamide-10-Zinc-30ml/dp/B01MDTVZTZ/ref=zg_bs_g_11060451_d_sccl_30/137-1423189-1835638?psc=1
+[2025-03-18T10:06:20.962+0000] {scrape.py:198} INFO - Scraped details for product B01MDTVZTZ
+[2025-03-18T10:06:33.043+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Vanicream-Moisturizer-Hyaluronic-pH-Balanced-Dermatologist/dp/B08BW46XXK/ref=zg_bs_g_11060451_d_sccl_31/137-1423189-1835638?psc=1
+[2025-03-18T10:06:33.056+0000] {scrape.py:198} INFO - Scraped details for product B08BW46XXK
+[2025-03-18T10:06:40.876+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Differin-Adapalene-0-1-Acne-Treatment/dp/B07L1PHSY9/ref=zg_bs_g_11060451_d_sccl_32/137-1423189-1835638?psc=1
+[2025-03-18T10:06:40.885+0000] {scrape.py:198} INFO - Scraped details for product B07L1PHSY9
+[2025-03-18T10:06:51.864+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Frownies-Forehead-Between-Eyes-Patches/dp/B00027DMSI/ref=zg_bs_g_11060451_d_sccl_33/137-1423189-1835638?psc=1
+[2025-03-18T10:06:51.875+0000] {scrape.py:198} INFO - Scraped details for product B00027DMSI
+[2025-03-18T10:07:00.446+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-AM/dp/B00F97FHAW/ref=zg_bs_g_11060451_d_sccl_34/137-1423189-1835638?psc=1
+[2025-03-18T10:07:00.458+0000] {scrape.py:198} INFO - Scraped details for product B00F97FHAW
+[2025-03-18T10:07:10.538+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Toleriane-Hydrating-Gentle-Cleanser/dp/B01N7T7JKJ/ref=zg_bs_g_11060451_d_sccl_35/137-1423189-1835638?psc=1
+[2025-03-18T10:07:10.549+0000] {scrape.py:198} INFO - Scraped details for product B01N7T7JKJ
+[2025-03-18T10:07:19.453+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/SkinSmart-Cleanser-Bacteria-Athletes-Multiple/dp/B07VRFC3Y7/ref=zg_bs_g_11060451_d_sccl_36/137-1423189-1835638?psc=1
+[2025-03-18T10:07:19.464+0000] {scrape.py:198} INFO - Scraped details for product B07VRFC3Y7
+[2025-03-18T10:07:29.126+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Softsoap-Liquid-Hand-Fresh-Breeze/dp/B079FV6PRH/ref=zg_bs_g_11060451_d_sccl_37/137-1423189-1835638?psc=1
+[2025-03-18T10:07:29.138+0000] {scrape.py:198} INFO - Scraped details for product B079FV6PRH
+[2025-03-18T10:07:42.024+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Sunscreen-Hydrating-Mineral-Titanium/dp/B07YLKXV11/ref=zg_bs_g_11060451_d_sccl_38/137-1423189-1835638?psc=1
+[2025-03-18T10:07:42.045+0000] {scrape.py:198} INFO - Scraped details for product B07YLKXV11
+[2025-03-18T10:07:53.366+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Cicaplast-Baume-Multi-Purpose-Butter/dp/B0060OUV5Y/ref=zg_bs_g_11060451_d_sccl_39/137-1423189-1835638?psc=1
+[2025-03-18T10:07:53.375+0000] {scrape.py:198} INFO - Scraped details for product B0060OUV5Y
+[2025-03-18T10:08:01.376+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Lipikar-Intense-Repair-Cream/dp/B003QXZWYW/ref=zg_bs_g_11060451_d_sccl_40/137-1423189-1835638?psc=1
+[2025-03-18T10:08:01.388+0000] {scrape.py:198} INFO - Scraped details for product B003QXZWYW
+[2025-03-18T10:08:11.394+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Good-Molecules-Formulated-Revitalize-Fragrance/dp/B091NJQ29P/ref=zg_bs_g_11060451_d_sccl_41/137-1423189-1835638?psc=1
+[2025-03-18T10:08:11.411+0000] {scrape.py:198} INFO - Scraped details for product B091NJQ29P
+[2025-03-18T10:08:23.024+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/DRMTLGY-Anti-Aging-Moisturizer-Foundation-Protection/dp/B07RW4CHC3/ref=zg_bs_g_11060451_d_sccl_42/137-1423189-1835638?psc=1
+[2025-03-18T10:08:23.043+0000] {scrape.py:198} INFO - Scraped details for product B07RW4CHC3
+[2025-03-18T10:08:34.089+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Aveeno-Moisturizing-Soothing-Emollients-Fragrance-Free/dp/B001459IEE/ref=zg_bs_g_11060451_d_sccl_43/137-1423189-1835638?psc=1
+[2025-03-18T10:08:34.102+0000] {scrape.py:198} INFO - Scraped details for product B001459IEE
+[2025-03-18T10:08:46.904+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Aquaphor-Advanced-Therapy-Ointment-Protectant/dp/B0107QPFBU/ref=zg_bs_g_11060451_d_sccl_44/137-1423189-1835638?psc=1
+[2025-03-18T10:08:46.913+0000] {scrape.py:198} INFO - Scraped details for product B0107QPFBU
+[2025-03-18T10:08:57.445+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Salicylic-Cleanser-Exfoliating-Fragrance/dp/B08CQ9T6KN/ref=zg_bs_g_11060451_d_sccl_45/137-1423189-1835638?psc=1
+[2025-03-18T10:08:57.459+0000] {scrape.py:198} INFO - Scraped details for product B08CQ9T6KN
+[2025-03-18T10:09:06.942+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/ANUA-Heartleaf-Quercetinol-Pore-Cleansing/dp/B0BVV8BNYJ/ref=zg_bs_g_11060451_d_sccl_46/137-1423189-1835638?psc=1
+[2025-03-18T10:09:06.954+0000] {scrape.py:198} INFO - Scraped details for product B0BVV8BNYJ
+[2025-03-18T10:09:19.118+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Laneige-Lip-Glowy-Balm-Berry/dp/B07DY2QRF6/ref=zg_bs_g_11060451_d_sccl_47/137-1423189-1835638?psc=1
+[2025-03-18T10:09:19.131+0000] {scrape.py:198} INFO - Scraped details for product B07DY2QRF6
+[2025-03-18T10:09:30.139+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Bior%C3%A9-Blackhead-Unclogging-Technology-Non-Comedogenic/dp/B0009EILKS/ref=zg_bs_g_11060451_d_sccl_48/137-1423189-1835638?psc=1
+[2025-03-18T10:09:30.152+0000] {scrape.py:198} INFO - Scraped details for product B0009EILKS
+[2025-03-18T10:09:42.989+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Repair-Cream-Circles-Puffiness/dp/B00JJPMXDO/ref=zg_bs_g_11060451_d_sccl_49/137-1423189-1835638?psc=1
+[2025-03-18T10:09:43.001+0000] {scrape.py:198} INFO - Scraped details for product B00JJPMXDO
+[2025-03-18T10:09:53.643+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Carroten-Tan-Express-Intensive-Tanning/dp/B00I51885U/ref=zg_bs_g_11060451_d_sccl_50/137-1423189-1835638?psc=1
+[2025-03-18T10:09:53.655+0000] {scrape.py:198} INFO - Scraped details for product B00I51885U
+[2025-03-18T10:10:03.031+0000] {scrape.py:182} INFO - Scraping page 2
+[2025-03-18T10:10:13.596+0000] {scrape.py:88} INFO - Total products found after scrolling: 0
+[2025-03-18T10:10:13.608+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Best-Sellers-Beauty-Personal-Care-Skin-Care-Products/zgbs/beauty/11060451/ref=zg_bs_nav_beauty_1?pg=2
+[2025-03-18T10:10:13.609+0000] {scrape.py:140} INFO - Scraped 0 products from page 2
+[2025-03-18T10:10:13.616+0000] {scrape.py:175} INFO - Saved 50 products to /opt/***/data/raw_20250318_100004.csv
+[2025-03-18T10:10:13.777+0000] {scrape.py:77} INFO - WebDriver closed successfully.
+[2025-03-18T10:10:13.793+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-03-18T10:10:13.794+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-18T10:10:13.803+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=amazon_etl_dag, task_id=scrape_amazon_data, run_id=scheduled__2025-03-18T09:00:00+00:00, execution_date=20250318T090000, start_date=20250318T100004, end_date=20250318T101013
+[2025-03-18T10:10:13.870+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-03-18T10:10:13.918+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T10:10:13.921+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

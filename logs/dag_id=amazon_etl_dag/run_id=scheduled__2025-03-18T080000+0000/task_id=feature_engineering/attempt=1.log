@@ -1,0 +1,26 @@
+[2025-03-18T09:21:46.781+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-18T09:21:46.810+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: amazon_etl_dag.feature_engineering scheduled__2025-03-18T08:00:00+00:00 [queued]>
+[2025-03-18T09:21:46.819+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: amazon_etl_dag.feature_engineering scheduled__2025-03-18T08:00:00+00:00 [queued]>
+[2025-03-18T09:21:46.820+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-18T09:21:46.833+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): feature_engineering> on 2025-03-18 08:00:00+00:00
+[2025-03-18T09:21:46.847+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'amazon_etl_dag', 'feature_engineering', 'scheduled__2025-03-18T08:00:00+00:00', '--job-id', '264', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmpzbtmwwxt']
+[2025-03-18T09:21:46.848+0000] {standard_task_runner.py:91} INFO - Job 264: Subtask feature_engineering
+[2025-03-18T09:21:46.850+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=70123) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-18T09:21:46.851+0000] {standard_task_runner.py:63} INFO - Started process 70162 to run task
+[2025-03-18T09:21:46.894+0000] {task_command.py:426} INFO - Running <TaskInstance: amazon_etl_dag.feature_engineering scheduled__2025-03-18T08:00:00+00:00 [running]> on host 23e83e453497
+[2025-03-18T09:21:46.969+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='amazon_etl_dag' AIRFLOW_CTX_TASK_ID='feature_engineering' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T08:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-18T08:00:00+00:00'
+[2025-03-18T09:21:46.970+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-18T09:21:47.346+0000] {logging_mixin.py:188} INFO - Cluster summary:
+[2025-03-18T09:21:47.352+0000] {logging_mixin.py:188} INFO -            bought_info   rating_count        top
+cluster                                        
+0        84184.529412   31646.529412  17.411765
+1        24469.878049   17951.780488  77.536585
+2        77891.181818  112782.090909  16.545455
+3        28000.000000  101056.900000  54.700000
+4        43316.142857   33635.238095  40.285714
+[2025-03-18T09:21:47.379+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-03-18T09:21:47.380+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-18T09:21:47.388+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=amazon_etl_dag, task_id=feature_engineering, run_id=scheduled__2025-03-18T08:00:00+00:00, execution_date=20250318T080000, start_date=20250318T092146, end_date=20250318T092147
+[2025-03-18T09:21:47.428+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-03-18T09:21:47.446+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T09:21:47.449+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

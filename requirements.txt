@@ -1,0 +1,15 @@
+beautifulsoup4==4.13.3
+python-dotenv==1.0.1
+requests==2.32.3
+requests-toolbelt==1.0.0
+selenium==4.29.0
+webdriver-manager==4.0.2
+numpy==2.0.2
+pandas==2.2.3
+scikit-learn==1.6.1
+xgboost==2.1.4
+matplotlib==3.9.4
+matplotlib-inline==0.1.7
+seaborn==0.13.2
+yellowbrick==1.5
+psycopg2==2.9.10
