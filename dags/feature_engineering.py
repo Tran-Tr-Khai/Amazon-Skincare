@@ -40,26 +40,39 @@ def assign_cluster_labels(df):
 
     top_threshold = cluster_summary["top"].mean()  
     rating_threshold = cluster_summary["rating_count"].mean()  
-    bought_threshold = cluster_summary["bought_info"].mean() 
     
-    for cluster in cluster_summary.index:
-        bought = cluster_summary.loc[cluster, "bought_info"]
-        rating = cluster_summary.loc[cluster, "rating_count"]
-        top = cluster_summary.loc[cluster, "top"]
-        
-        if top <= top_threshold:
-            if rating > rating_threshold:
-                df.loc[df["cluster"] == cluster, "cluster_label"] = "Sustainable trend"
-            else:
-                df.loc[df["cluster"] == cluster, "cluster_label"] = "Trending"
+    # Tìm các cụm thỏa mãn top > threshold và rating <= threshold
+    potential_clusters = cluster_summary[
+        (cluster_summary["top"] > top_threshold) & 
+        (cluster_summary["rating_count"] <= rating_threshold)
+    ].index.tolist()
 
-        else:
-            if rating > rating_threshold:
-                df.loc[df["cluster"] == cluster, "cluster_label"] = "Trending again"
-            elif rating < rating_threshold:
+    # So sánh bought_info trong potential_clusters
+    if len(potential_clusters) > 1:
+        bought_values = cluster_summary.loc[potential_clusters, "bought_info"]
+        max_bought_cluster = bought_values.idxmax()
+        for cluster in potential_clusters:
+            if cluster == max_bought_cluster:
                 df.loc[df["cluster"] == cluster, "cluster_label"] = "Potential Growth"
             else:
                 df.loc[df["cluster"] == cluster, "cluster_label"] = "Steady Seller"
+    elif len(potential_clusters) == 1:
+        df.loc[df["cluster"] == potential_clusters[0], "cluster_label"] = "Potential Growth"
+
+    # Gán nhãn cho các cụm còn lại
+    for cluster in cluster_summary.index:
+        if cluster not in potential_clusters:
+            rating = cluster_summary.loc[cluster, "rating_count"]
+            top = cluster_summary.loc[cluster, "top"]
+            
+            if top <= top_threshold:
+                if rating > rating_threshold:
+                    df.loc[df["cluster"] == cluster, "cluster_label"] = "Sustainable trend"
+                else:
+                    df.loc[df["cluster"] == cluster, "cluster_label"] = "Trending"
+            else:
+                if rating > rating_threshold:
+                    df.loc[df["cluster"] == cluster, "cluster_label"] = "Trending again"
     
     return df
 

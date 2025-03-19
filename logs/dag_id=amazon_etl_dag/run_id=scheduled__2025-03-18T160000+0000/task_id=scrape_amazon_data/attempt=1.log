@@ -1,0 +1,391 @@
+[2025-03-18T17:00:04.491+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-18T17:00:04.521+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: amazon_etl_dag.scrape_amazon_data scheduled__2025-03-18T16:00:00+00:00 [queued]>
+[2025-03-18T17:00:04.527+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: amazon_etl_dag.scrape_amazon_data scheduled__2025-03-18T16:00:00+00:00 [queued]>
+[2025-03-18T17:00:04.529+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-18T17:00:04.542+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): scrape_amazon_data> on 2025-03-18 16:00:00+00:00
+[2025-03-18T17:00:04.554+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'amazon_etl_dag', 'scrape_amazon_data', 'scheduled__2025-03-18T16:00:00+00:00', '--job-id', '279', '--raw', '--subdir', 'DAGS_FOLDER/test_dag.py', '--cfg-path', '/tmp/tmpeujivtee']
+[2025-03-18T17:00:04.555+0000] {standard_task_runner.py:91} INFO - Job 279: Subtask scrape_amazon_data
+[2025-03-18T17:00:04.557+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=55062) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-18T17:00:04.558+0000] {standard_task_runner.py:63} INFO - Started process 55121 to run task
+[2025-03-18T17:00:04.598+0000] {task_command.py:426} INFO - Running <TaskInstance: amazon_etl_dag.scrape_amazon_data scheduled__2025-03-18T16:00:00+00:00 [running]> on host e8963d5c211f
+[2025-03-18T17:00:04.670+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='amazon_etl_dag' AIRFLOW_CTX_TASK_ID='scrape_amazon_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-18T16:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-18T16:00:00+00:00'
+[2025-03-18T17:00:04.671+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-18T17:00:04.673+0000] {scrape.py:182} INFO - Scraping page 1
+[2025-03-18T17:00:08.327+0000] {scrape.py:60} INFO - Initialized new WebDriver
+[2025-03-18T17:00:22.471+0000] {scrape.py:88} INFO - Total products found after scrolling: 0
+[2025-03-18T17:00:22.625+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Best-Sellers-Beauty-Personal-Care-Skin-Care-Products/zgbs/beauty/11060451/ref=zg_bs_nav_beauty_1?pg=1
+[2025-03-18T17:00:22.636+0000] {scrape.py:140} INFO - Scraped 50 products from page 1
+[2025-03-18T17:00:27.241+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Mighty-Patch-Hydrocolloid-Absorbing-count/dp/B074PVTPBW/ref=zg_bs_g_11060451_d_sccl_1/138-8806548-5327547?psc=1
+[2025-03-18T17:00:27.253+0000] {scrape.py:198} INFO - Scraped details for product B074PVTPBW
+[2025-03-18T17:00:39.425+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Clean-Skin-Club-Disposable-Sensitive/dp/B07PBXXNCY/ref=zg_bs_g_11060451_d_sccl_2/138-8806548-5327547?psc=1
+[2025-03-18T17:00:39.438+0000] {scrape.py:198} INFO - Scraped details for product B07PBXXNCY
+[2025-03-18T17:00:49.854+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/eos-Cashmere-Moisture-Lightweight-Non-Greasy/dp/B08KT2Z93D/ref=zg_bs_g_11060451_d_sccl_3/138-8806548-5327547?psc=1
+[2025-03-18T17:00:49.868+0000] {scrape.py:198} INFO - Scraped details for product B08KT2Z93D
+[2025-03-18T17:01:00.946+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Neutrogena-Cleansing-Towelettes-Waterproof-Alcohol-Free/dp/B00U2VQZDS/ref=zg_bs_g_11060451_d_sccl_4/138-8806548-5327547?psc=1
+[2025-03-18T17:01:00.960+0000] {scrape.py:198} INFO - Scraped details for product B00U2VQZDS
+[2025-03-18T17:01:13.113+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Medicube-Zero-Pore-Pads-Dual-Textured/dp/B09V7Z4TJG/ref=zg_bs_g_11060451_d_sccl_5/138-8806548-5327547?psc=1
+[2025-03-18T17:01:13.128+0000] {scrape.py:198} INFO - Scraped details for product B09V7Z4TJG
+[2025-03-18T17:01:26.229+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Biodance-Bio-Collagen-Tightening-Hydrating-Molecular/dp/B0B2RM68G2/ref=zg_bs_g_11060451_d_sccl_6/138-8806548-5327547?psc=1
+[2025-03-18T17:01:26.241+0000] {scrape.py:198} INFO - Scraped details for product B0B2RM68G2
+[2025-03-18T17:01:36.554+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/PanOxyl-Foaming-Peroxide-Strength-Antimicrobial/dp/B081KL2QYJ/ref=zg_bs_g_11060451_d_sccl_7/138-8806548-5327547?psc=1
+[2025-03-18T17:01:36.563+0000] {scrape.py:198} INFO - Scraped details for product B081KL2QYJ
+[2025-03-18T17:01:46.869+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dove-Body-Wash-Pump-Moisture/dp/B00MEDOY2G/ref=zg_bs_g_11060451_d_sccl_8/138-8806548-5327547?psc=1
+[2025-03-18T17:01:46.884+0000] {scrape.py:198} INFO - Scraped details for product B00MEDOY2G
+[2025-03-18T17:01:57.337+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Toleriane-Double-Repair-Moisturizer/dp/B01N9SPQHQ/ref=zg_bs_g_11060451_d_sccl_9/138-8806548-5327547?psc=1
+[2025-03-18T17:01:57.349+0000] {scrape.py:198} INFO - Scraped details for product B01N9SPQHQ
+[2025-03-18T17:02:06.600+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Ordinary-Exfoliating-Brightening-Smoothing-Even-Looking/dp/B071914GGL/ref=zg_bs_g_11060451_d_sccl_10/138-8806548-5327547?psc=1
+[2025-03-18T17:02:06.609+0000] {scrape.py:198} INFO - Scraped details for product B071914GGL
+[2025-03-18T17:02:19.255+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/MRS-MEYERS-CLEAN-DAY-Biodegradable/dp/B07MFMWFYL/ref=zg_bs_g_11060451_d_sccl_11/138-8806548-5327547?psc=1
+[2025-03-18T17:02:19.270+0000] {scrape.py:198} INFO - Scraped details for product B07MFMWFYL
+[2025-03-18T17:02:28.736+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Valitic-Remover-Vitamin-Collagen-Turmeric/dp/B09MFMCTRK/ref=zg_bs_g_11060451_d_sccl_12/138-8806548-5327547?psc=1
+[2025-03-18T17:02:28.750+0000] {scrape.py:198} INFO - Scraped details for product B09MFMCTRK
+[2025-03-18T17:02:37.866+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Moisturizing-Cream-Daily-Moisturizer/dp/B00TTD9BRC/ref=zg_bs_g_11060451_d_sccl_13/138-8806548-5327547?psc=1
+[2025-03-18T17:02:37.880+0000] {scrape.py:198} INFO - Scraped details for product B00TTD9BRC
+[2025-03-18T17:02:43.476+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/COSRX-Repairing-Hydrating-Secretion-Phthalates/dp/B00PBX3L7K/ref=zg_bs_g_11060451_d_sccl_14/138-8806548-5327547?psc=1
+[2025-03-18T17:02:43.476+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/COSRX-Repairing-Hydrating-Secretion-Phthalates/dp/B00PBX3L7K/ref=zg_bs_g_11060451_d_sccl_14/138-8806548-5327547?psc=1
+[2025-03-18T17:02:52.248+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/COSRX-Repairing-Hydrating-Secretion-Phthalates/dp/B00PBX3L7K/ref=zg_bs_g_11060451_d_sccl_14/138-8806548-5327547?psc=1
+[2025-03-18T17:02:52.270+0000] {scrape.py:198} INFO - Scraped details for product B00PBX3L7K
+[2025-03-18T17:03:01.625+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Moisturizing-Lotion-Hyaluronic-Fragrance/dp/B000YJ2SLG/ref=zg_bs_g_11060451_d_sccl_15/138-8806548-5327547?psc=1
+[2025-03-18T17:03:01.626+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Moisturizing-Lotion-Hyaluronic-Fragrance/dp/B000YJ2SLG/ref=zg_bs_g_11060451_d_sccl_15/138-8806548-5327547?psc=1
+[2025-03-18T17:03:11.220+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Moisturizing-Lotion-Hyaluronic-Fragrance/dp/B000YJ2SLG/ref=zg_bs_g_11060451_d_sccl_15/138-8806548-5327547?psc=1
+[2025-03-18T17:03:11.236+0000] {scrape.py:198} INFO - Scraped details for product B000YJ2SLG
+[2025-03-18T17:03:21.414+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Paulas-Choice-SKIN-PERFECTING-Exfoliant-Facial-Blackheads/dp/B00949CTQQ/ref=zg_bs_g_11060451_d_sccl_16/138-8806548-5327547?psc=1
+[2025-03-18T17:03:21.415+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Paulas-Choice-SKIN-PERFECTING-Exfoliant-Facial-Blackheads/dp/B00949CTQQ/ref=zg_bs_g_11060451_d_sccl_16/138-8806548-5327547?psc=1
+[2025-03-18T17:03:29.620+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Paulas-Choice-SKIN-PERFECTING-Exfoliant-Facial-Blackheads/dp/B00949CTQQ/ref=zg_bs_g_11060451_d_sccl_16/138-8806548-5327547?psc=1
+[2025-03-18T17:03:29.631+0000] {scrape.py:198} INFO - Scraped details for product B00949CTQQ
+[2025-03-18T17:03:41.561+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Medicube-Collagen-Wrapping-Elasticity-Hydration/dp/B0BRMYHMS5/ref=zg_bs_g_11060451_d_sccl_17/138-8806548-5327547?psc=1
+[2025-03-18T17:03:41.572+0000] {scrape.py:198} INFO - Scraped details for product B0BRMYHMS5
+[2025-03-18T17:03:50.503+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Hydrating-Facial-Cleanser-Fragrance/dp/B01MSSDEPK/ref=zg_bs_g_11060451_d_sccl_18/138-8806548-5327547?psc=1
+[2025-03-18T17:03:50.504+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Hydrating-Facial-Cleanser-Fragrance/dp/B01MSSDEPK/ref=zg_bs_g_11060451_d_sccl_18/138-8806548-5327547?psc=1
+[2025-03-18T17:03:59.232+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Hydrating-Facial-Cleanser-Fragrance/dp/B01MSSDEPK/ref=zg_bs_g_11060451_d_sccl_18/138-8806548-5327547?psc=1
+[2025-03-18T17:03:59.247+0000] {scrape.py:198} INFO - Scraped details for product B01MSSDEPK
+[2025-03-18T17:04:07.675+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Ordinary-Hyaluronic-Acid-2-30ml/dp/B01MYEZPC8/ref=zg_bs_g_11060451_d_sccl_19/138-8806548-5327547?psc=1
+[2025-03-18T17:04:07.676+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Ordinary-Hyaluronic-Acid-2-30ml/dp/B01MYEZPC8/ref=zg_bs_g_11060451_d_sccl_19/138-8806548-5327547?psc=1
+[2025-03-18T17:04:16.073+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Ordinary-Hyaluronic-Acid-2-30ml/dp/B01MYEZPC8/ref=zg_bs_g_11060451_d_sccl_19/138-8806548-5327547?psc=1
+[2025-03-18T17:04:16.090+0000] {scrape.py:198} INFO - Scraped details for product B01MYEZPC8
+[2025-03-18T17:04:25.834+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ/ref=zg_bs_g_11060451_d_sccl_20/138-8806548-5327547?psc=1
+[2025-03-18T17:04:25.835+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ/ref=zg_bs_g_11060451_d_sccl_20/138-8806548-5327547?psc=1
+[2025-03-18T17:04:34.391+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/EltaMD-Acne-Prone-Mineral-Based-Dermatologist-Recommended/dp/B002MSN3QQ/ref=zg_bs_g_11060451_d_sccl_20/138-8806548-5327547?psc=1
+[2025-03-18T17:04:34.410+0000] {scrape.py:198} INFO - Scraped details for product B002MSN3QQ
+[2025-03-18T17:04:44.182+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/MRS-MEYERS-CLEAN-DAY-Biodegradable/dp/B07TJG79HP/ref=zg_bs_g_11060451_d_sccl_21/138-8806548-5327547?psc=1
+[2025-03-18T17:04:44.183+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/MRS-MEYERS-CLEAN-DAY-Biodegradable/dp/B07TJG79HP/ref=zg_bs_g_11060451_d_sccl_21/138-8806548-5327547?psc=1
+[2025-03-18T17:04:52.768+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/MRS-MEYERS-CLEAN-DAY-Biodegradable/dp/B07TJG79HP/ref=zg_bs_g_11060451_d_sccl_21/138-8806548-5327547?psc=1
+[2025-03-18T17:04:52.780+0000] {scrape.py:198} INFO - Scraped details for product B07TJG79HP
+[2025-03-18T17:05:00.897+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dove-Hypoallergenic-Paraben-Free-Sulfate-Free-Cruelty-Free/dp/B00SK71SAG/ref=zg_bs_g_11060451_d_sccl_22/138-8806548-5327547?psc=1
+[2025-03-18T17:05:00.899+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Dove-Hypoallergenic-Paraben-Free-Sulfate-Free-Cruelty-Free/dp/B00SK71SAG/ref=zg_bs_g_11060451_d_sccl_22/138-8806548-5327547?psc=1
+[2025-03-18T17:05:09.906+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Dove-Hypoallergenic-Paraben-Free-Sulfate-Free-Cruelty-Free/dp/B00SK71SAG/ref=zg_bs_g_11060451_d_sccl_22/138-8806548-5327547?psc=1
+[2025-03-18T17:05:09.921+0000] {scrape.py:198} INFO - Scraped details for product B00SK71SAG
+[2025-03-18T17:05:19.035+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Under-Eye-Patches-Gold-24-Pairs/dp/B014E2D6BY/ref=zg_bs_g_11060451_d_sccl_23/138-8806548-5327547?psc=1
+[2025-03-18T17:05:19.036+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Under-Eye-Patches-Gold-24-Pairs/dp/B014E2D6BY/ref=zg_bs_g_11060451_d_sccl_23/138-8806548-5327547?psc=1
+[2025-03-18T17:05:28.633+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Under-Eye-Patches-Gold-24-Pairs/dp/B014E2D6BY/ref=zg_bs_g_11060451_d_sccl_23/138-8806548-5327547?psc=1
+[2025-03-18T17:05:28.650+0000] {scrape.py:198} INFO - Scraped details for product B014E2D6BY
+[2025-03-18T17:05:38.118+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-Lightweight/dp/B00365DABC/ref=zg_bs_g_11060451_d_sccl_24/138-8806548-5327547?psc=1
+[2025-03-18T17:05:38.119+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-Lightweight/dp/B00365DABC/ref=zg_bs_g_11060451_d_sccl_24/138-8806548-5327547?psc=1
+[2025-03-18T17:05:46.867+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-Lightweight/dp/B00365DABC/ref=zg_bs_g_11060451_d_sccl_24/138-8806548-5327547?psc=1
+[2025-03-18T17:05:46.884+0000] {scrape.py:198} INFO - Scraped details for product B00365DABC
+[2025-03-18T17:05:56.019+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Face-Moisturizer-Collagen-Cream-Moisturizing/dp/B0BBSP2JNQ/ref=zg_bs_g_11060451_d_sccl_25/138-8806548-5327547?psc=1
+[2025-03-18T17:05:56.031+0000] {scrape.py:198} INFO - Scraped details for product B0BBSP2JNQ
+[2025-03-18T17:06:05.903+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Foaming-Facial-Cleanser-Washing/dp/B01N1LL62W/ref=zg_bs_g_11060451_d_sccl_26/138-8806548-5327547?psc=1
+[2025-03-18T17:06:05.904+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Foaming-Facial-Cleanser-Washing/dp/B01N1LL62W/ref=zg_bs_g_11060451_d_sccl_26/138-8806548-5327547?psc=1
+[2025-03-18T17:06:14.409+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Foaming-Facial-Cleanser-Washing/dp/B01N1LL62W/ref=zg_bs_g_11060451_d_sccl_26/138-8806548-5327547?psc=1
+[2025-03-18T17:06:14.423+0000] {scrape.py:198} INFO - Scraped details for product B01N1LL62W
+[2025-03-18T17:06:21.009+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Skin-Renewing-Night-Cream/dp/B00SNPCSUY/ref=zg_bs_g_11060451_d_sccl_27/138-8806548-5327547?psc=1
+[2025-03-18T17:06:21.010+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Skin-Renewing-Night-Cream/dp/B00SNPCSUY/ref=zg_bs_g_11060451_d_sccl_27/138-8806548-5327547?psc=1
+[2025-03-18T17:06:29.672+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Skin-Renewing-Night-Cream/dp/B00SNPCSUY/ref=zg_bs_g_11060451_d_sccl_27/138-8806548-5327547?psc=1
+[2025-03-18T17:06:29.685+0000] {scrape.py:198} INFO - Scraped details for product B00SNPCSUY
+[2025-03-18T17:06:36.006+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Toleriane-Purifying-Sensitive-Niacinamide/dp/B01N34XW93/ref=zg_bs_g_11060451_d_sccl_28/138-8806548-5327547?psc=1
+[2025-03-18T17:06:36.007+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Roche-Posay-Toleriane-Purifying-Sensitive-Niacinamide/dp/B01N34XW93/ref=zg_bs_g_11060451_d_sccl_28/138-8806548-5327547?psc=1
+[2025-03-18T17:06:44.005+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Roche-Posay-Toleriane-Purifying-Sensitive-Niacinamide/dp/B01N34XW93/ref=zg_bs_g_11060451_d_sccl_28/138-8806548-5327547?psc=1
+[2025-03-18T17:06:44.018+0000] {scrape.py:198} INFO - Scraped details for product B01N34XW93
+[2025-03-18T17:06:56.446+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Vanicream-Moisturizer-Hyaluronic-pH-Balanced-Dermatologist/dp/B08BW46XXK/ref=zg_bs_g_11060451_d_sccl_29/138-8806548-5327547?psc=1
+[2025-03-18T17:06:56.457+0000] {scrape.py:198} INFO - Scraped details for product B08BW46XXK
+[2025-03-18T17:07:05.467+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Ordinary-Niacinamide-10-Zinc-30ml/dp/B01MDTVZTZ/ref=zg_bs_g_11060451_d_sccl_30/138-8806548-5327547?psc=1
+[2025-03-18T17:07:05.469+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Ordinary-Niacinamide-10-Zinc-30ml/dp/B01MDTVZTZ/ref=zg_bs_g_11060451_d_sccl_30/138-8806548-5327547?psc=1
+[2025-03-18T17:07:13.653+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Ordinary-Niacinamide-10-Zinc-30ml/dp/B01MDTVZTZ/ref=zg_bs_g_11060451_d_sccl_30/138-8806548-5327547?psc=1
+[2025-03-18T17:07:13.671+0000] {scrape.py:198} INFO - Scraped details for product B01MDTVZTZ
+[2025-03-18T17:07:19.786+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Tree-Hut-Variety-Strawberry-Champaine/dp/B0BX2TZZWG/ref=zg_bs_g_11060451_d_sccl_31/138-8806548-5327547?psc=1
+[2025-03-18T17:07:19.787+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Tree-Hut-Variety-Strawberry-Champaine/dp/B0BX2TZZWG/ref=zg_bs_g_11060451_d_sccl_31/138-8806548-5327547?psc=1
+[2025-03-18T17:07:28.467+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Tree-Hut-Variety-Strawberry-Champaine/dp/B0BX2TZZWG/ref=zg_bs_g_11060451_d_sccl_31/138-8806548-5327547?psc=1
+[2025-03-18T17:07:28.483+0000] {scrape.py:198} INFO - Scraped details for product B0BX2TZZWG
+[2025-03-18T17:07:38.129+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Differin-Adapalene-0-1-Acne-Treatment/dp/B07L1PHSY9/ref=zg_bs_g_11060451_d_sccl_32/138-8806548-5327547?psc=1
+[2025-03-18T17:07:38.130+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Differin-Adapalene-0-1-Acne-Treatment/dp/B07L1PHSY9/ref=zg_bs_g_11060451_d_sccl_32/138-8806548-5327547?psc=1
+[2025-03-18T17:07:46.332+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Differin-Adapalene-0-1-Acne-Treatment/dp/B07L1PHSY9/ref=zg_bs_g_11060451_d_sccl_32/138-8806548-5327547?psc=1
+[2025-03-18T17:07:46.344+0000] {scrape.py:198} INFO - Scraped details for product B07L1PHSY9
+[2025-03-18T17:07:55.186+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Frownies-Forehead-Between-Eyes-Patches/dp/B00027DMSI/ref=zg_bs_g_11060451_d_sccl_33/138-8806548-5327547?psc=1
+[2025-03-18T17:07:55.187+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Frownies-Forehead-Between-Eyes-Patches/dp/B00027DMSI/ref=zg_bs_g_11060451_d_sccl_33/138-8806548-5327547?psc=1
+[2025-03-18T17:08:03.764+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Frownies-Forehead-Between-Eyes-Patches/dp/B00027DMSI/ref=zg_bs_g_11060451_d_sccl_33/138-8806548-5327547?psc=1
+[2025-03-18T17:08:03.777+0000] {scrape.py:198} INFO - Scraped details for product B00027DMSI
+[2025-03-18T17:08:14.080+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-AM/dp/B00F97FHAW/ref=zg_bs_g_11060451_d_sccl_34/138-8806548-5327547?psc=1
+[2025-03-18T17:08:14.081+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-AM/dp/B00F97FHAW/ref=zg_bs_g_11060451_d_sccl_34/138-8806548-5327547?psc=1
+[2025-03-18T17:08:22.792+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Facial-Moisturizing-Lotion-AM/dp/B00F97FHAW/ref=zg_bs_g_11060451_d_sccl_34/138-8806548-5327547?psc=1
+[2025-03-18T17:08:22.811+0000] {scrape.py:198} INFO - Scraped details for product B00F97FHAW
+[2025-03-18T17:08:30.344+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Sunscreen-Hydrating-Mineral-Titanium/dp/B07YLKXV11/ref=zg_bs_g_11060451_d_sccl_35/138-8806548-5327547?psc=1
+[2025-03-18T17:08:30.346+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Sunscreen-Hydrating-Mineral-Titanium/dp/B07YLKXV11/ref=zg_bs_g_11060451_d_sccl_35/138-8806548-5327547?psc=1
+[2025-03-18T17:08:39.083+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Sunscreen-Hydrating-Mineral-Titanium/dp/B07YLKXV11/ref=zg_bs_g_11060451_d_sccl_35/138-8806548-5327547?psc=1
+[2025-03-18T17:08:39.104+0000] {scrape.py:198} INFO - Scraped details for product B07YLKXV11
+[2025-03-18T17:08:52.063+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Softsoap-Liquid-Hand-Fresh-Breeze/dp/B079FV6PRH/ref=zg_bs_g_11060451_d_sccl_36/138-8806548-5327547?psc=1
+[2025-03-18T17:08:52.073+0000] {scrape.py:198} INFO - Scraped details for product B079FV6PRH
+[2025-03-18T17:09:00.449+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Toleriane-Hydrating-Gentle-Cleanser/dp/B01N7T7JKJ/ref=zg_bs_g_11060451_d_sccl_37/138-8806548-5327547?psc=1
+[2025-03-18T17:09:00.450+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Roche-Posay-Toleriane-Hydrating-Gentle-Cleanser/dp/B01N7T7JKJ/ref=zg_bs_g_11060451_d_sccl_37/138-8806548-5327547?psc=1
+[2025-03-18T17:09:08.434+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Roche-Posay-Toleriane-Hydrating-Gentle-Cleanser/dp/B01N7T7JKJ/ref=zg_bs_g_11060451_d_sccl_37/138-8806548-5327547?psc=1
+[2025-03-18T17:09:08.448+0000] {scrape.py:198} INFO - Scraped details for product B01N7T7JKJ
+[2025-03-18T17:09:18.307+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/DRMTLGY-Anti-Aging-Moisturizer-Foundation-Protection/dp/B07RW4CHC3/ref=zg_bs_g_11060451_d_sccl_38/138-8806548-5327547?psc=1
+[2025-03-18T17:09:18.308+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/DRMTLGY-Anti-Aging-Moisturizer-Foundation-Protection/dp/B07RW4CHC3/ref=zg_bs_g_11060451_d_sccl_38/138-8806548-5327547?psc=1
+[2025-03-18T17:09:27.161+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/DRMTLGY-Anti-Aging-Moisturizer-Foundation-Protection/dp/B07RW4CHC3/ref=zg_bs_g_11060451_d_sccl_38/138-8806548-5327547?psc=1
+[2025-03-18T17:09:27.180+0000] {scrape.py:198} INFO - Scraped details for product B07RW4CHC3
+[2025-03-18T17:09:36.580+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/SkinSmart-Cleanser-Bacteria-Athletes-Multiple/dp/B07VRFC3Y7/ref=zg_bs_g_11060451_d_sccl_39/138-8806548-5327547?psc=1
+[2025-03-18T17:09:36.581+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/SkinSmart-Cleanser-Bacteria-Athletes-Multiple/dp/B07VRFC3Y7/ref=zg_bs_g_11060451_d_sccl_39/138-8806548-5327547?psc=1
+[2025-03-18T17:09:45.111+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/SkinSmart-Cleanser-Bacteria-Athletes-Multiple/dp/B07VRFC3Y7/ref=zg_bs_g_11060451_d_sccl_39/138-8806548-5327547?psc=1
+[2025-03-18T17:09:45.125+0000] {scrape.py:198} INFO - Scraped details for product B07VRFC3Y7
+[2025-03-18T17:09:54.481+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Cicaplast-Baume-Multi-Purpose-Butter/dp/B0060OUV5Y/ref=zg_bs_g_11060451_d_sccl_40/138-8806548-5327547?psc=1
+[2025-03-18T17:09:54.482+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Roche-Posay-Cicaplast-Baume-Multi-Purpose-Butter/dp/B0060OUV5Y/ref=zg_bs_g_11060451_d_sccl_40/138-8806548-5327547?psc=1
+[2025-03-18T17:10:02.225+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Roche-Posay-Cicaplast-Baume-Multi-Purpose-Butter/dp/B0060OUV5Y/ref=zg_bs_g_11060451_d_sccl_40/138-8806548-5327547?psc=1
+[2025-03-18T17:10:02.236+0000] {scrape.py:198} INFO - Scraped details for product B0060OUV5Y
+[2025-03-18T17:10:08.551+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Good-Molecules-Formulated-Revitalize-Fragrance/dp/B091NJQ29P/ref=zg_bs_g_11060451_d_sccl_41/138-8806548-5327547?psc=1
+[2025-03-18T17:10:08.552+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Good-Molecules-Formulated-Revitalize-Fragrance/dp/B091NJQ29P/ref=zg_bs_g_11060451_d_sccl_41/138-8806548-5327547?psc=1
+[2025-03-18T17:10:16.749+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Good-Molecules-Formulated-Revitalize-Fragrance/dp/B091NJQ29P/ref=zg_bs_g_11060451_d_sccl_41/138-8806548-5327547?psc=1
+[2025-03-18T17:10:16.769+0000] {scrape.py:198} INFO - Scraped details for product B091NJQ29P
+[2025-03-18T17:10:22.317+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Roche-Posay-Lipikar-Intense-Repair-Cream/dp/B003QXZWYW/ref=zg_bs_g_11060451_d_sccl_42/138-8806548-5327547?psc=1
+[2025-03-18T17:10:22.319+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Roche-Posay-Lipikar-Intense-Repair-Cream/dp/B003QXZWYW/ref=zg_bs_g_11060451_d_sccl_42/138-8806548-5327547?psc=1
+[2025-03-18T17:10:30.082+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Roche-Posay-Lipikar-Intense-Repair-Cream/dp/B003QXZWYW/ref=zg_bs_g_11060451_d_sccl_42/138-8806548-5327547?psc=1
+[2025-03-18T17:10:30.094+0000] {scrape.py:198} INFO - Scraped details for product B003QXZWYW
+[2025-03-18T17:10:39.434+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Aveeno-Moisturizing-Soothing-Emollients-Fragrance-Free/dp/B001459IEE/ref=zg_bs_g_11060451_d_sccl_43/138-8806548-5327547?psc=1
+[2025-03-18T17:10:39.435+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Aveeno-Moisturizing-Soothing-Emollients-Fragrance-Free/dp/B001459IEE/ref=zg_bs_g_11060451_d_sccl_43/138-8806548-5327547?psc=1
+[2025-03-18T17:10:48.413+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Aveeno-Moisturizing-Soothing-Emollients-Fragrance-Free/dp/B001459IEE/ref=zg_bs_g_11060451_d_sccl_43/138-8806548-5327547?psc=1
+[2025-03-18T17:10:48.429+0000] {scrape.py:198} INFO - Scraped details for product B001459IEE
+[2025-03-18T17:10:55.402+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/TruSkin-Naturals-Vitamin-Topical-Hyaluronic/dp/B01M4MCUAF/ref=zg_bs_g_11060451_d_sccl_44/138-8806548-5327547?psc=1
+[2025-03-18T17:10:55.403+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/TruSkin-Naturals-Vitamin-Topical-Hyaluronic/dp/B01M4MCUAF/ref=zg_bs_g_11060451_d_sccl_44/138-8806548-5327547?psc=1
+[2025-03-18T17:11:04.518+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/TruSkin-Naturals-Vitamin-Topical-Hyaluronic/dp/B01M4MCUAF/ref=zg_bs_g_11060451_d_sccl_44/138-8806548-5327547?psc=1
+[2025-03-18T17:11:04.538+0000] {scrape.py:198} INFO - Scraped details for product B01M4MCUAF
+[2025-03-18T17:11:10.696+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Salicylic-Cleanser-Exfoliating-Fragrance/dp/B08CQ9T6KN/ref=zg_bs_g_11060451_d_sccl_45/138-8806548-5327547?psc=1
+[2025-03-18T17:11:10.697+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Salicylic-Cleanser-Exfoliating-Fragrance/dp/B08CQ9T6KN/ref=zg_bs_g_11060451_d_sccl_45/138-8806548-5327547?psc=1
+[2025-03-18T17:11:19.869+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Salicylic-Cleanser-Exfoliating-Fragrance/dp/B08CQ9T6KN/ref=zg_bs_g_11060451_d_sccl_45/138-8806548-5327547?psc=1
+[2025-03-18T17:11:19.885+0000] {scrape.py:198} INFO - Scraped details for product B08CQ9T6KN
+[2025-03-18T17:11:28.817+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Aquaphor-Advanced-Therapy-Ointment-Protectant/dp/B0107QPFBU/ref=zg_bs_g_11060451_d_sccl_46/138-8806548-5327547?psc=1
+[2025-03-18T17:11:28.818+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Aquaphor-Advanced-Therapy-Ointment-Protectant/dp/B0107QPFBU/ref=zg_bs_g_11060451_d_sccl_46/138-8806548-5327547?psc=1
+[2025-03-18T17:11:37.320+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Aquaphor-Advanced-Therapy-Ointment-Protectant/dp/B0107QPFBU/ref=zg_bs_g_11060451_d_sccl_46/138-8806548-5327547?psc=1
+[2025-03-18T17:11:37.333+0000] {scrape.py:198} INFO - Scraped details for product B0107QPFBU
+[2025-03-18T17:11:45.261+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/ANUA-Heartleaf-Quercetinol-Pore-Cleansing/dp/B0BVV8BNYJ/ref=zg_bs_g_11060451_d_sccl_47/138-8806548-5327547?psc=1
+[2025-03-18T17:11:45.262+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/ANUA-Heartleaf-Quercetinol-Pore-Cleansing/dp/B0BVV8BNYJ/ref=zg_bs_g_11060451_d_sccl_47/138-8806548-5327547?psc=1
+[2025-03-18T17:11:53.428+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/ANUA-Heartleaf-Quercetinol-Pore-Cleansing/dp/B0BVV8BNYJ/ref=zg_bs_g_11060451_d_sccl_47/138-8806548-5327547?psc=1
+[2025-03-18T17:11:53.440+0000] {scrape.py:198} INFO - Scraped details for product B0BVV8BNYJ
+[2025-03-18T17:12:00.909+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Laneige-Lip-Glowy-Balm-Berry/dp/B07DY2QRF6/ref=zg_bs_g_11060451_d_sccl_48/138-8806548-5327547?psc=1
+[2025-03-18T17:12:00.910+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Laneige-Lip-Glowy-Balm-Berry/dp/B07DY2QRF6/ref=zg_bs_g_11060451_d_sccl_48/138-8806548-5327547?psc=1
+[2025-03-18T17:12:09.663+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Laneige-Lip-Glowy-Balm-Berry/dp/B07DY2QRF6/ref=zg_bs_g_11060451_d_sccl_48/138-8806548-5327547?psc=1
+[2025-03-18T17:12:09.678+0000] {scrape.py:198} INFO - Scraped details for product B07DY2QRF6
+[2025-03-18T17:12:17.726+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Repair-Cream-Circles-Puffiness/dp/B00JJPMXDO/ref=zg_bs_g_11060451_d_sccl_49/138-8806548-5327547?psc=1
+[2025-03-18T17:12:17.728+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Repair-Cream-Circles-Puffiness/dp/B00JJPMXDO/ref=zg_bs_g_11060451_d_sccl_49/138-8806548-5327547?psc=1
+[2025-03-18T17:12:26.303+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Repair-Cream-Circles-Puffiness/dp/B00JJPMXDO/ref=zg_bs_g_11060451_d_sccl_49/138-8806548-5327547?psc=1
+[2025-03-18T17:12:26.317+0000] {scrape.py:198} INFO - Scraped details for product B00JJPMXDO
+[2025-03-18T17:12:32.089+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Beauty-Moisturizing-Effectively-Bacteria-Nourishes/dp/B086K2KMNR/ref=zg_bs_g_11060451_d_sccl_50/138-8806548-5327547?psc=1
+[2025-03-18T17:12:32.090+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Beauty-Moisturizing-Effectively-Bacteria-Nourishes/dp/B086K2KMNR/ref=zg_bs_g_11060451_d_sccl_50/138-8806548-5327547?psc=1
+[2025-03-18T17:12:40.802+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Beauty-Moisturizing-Effectively-Bacteria-Nourishes/dp/B086K2KMNR/ref=zg_bs_g_11060451_d_sccl_50/138-8806548-5327547?psc=1
+[2025-03-18T17:12:40.818+0000] {scrape.py:198} INFO - Scraped details for product B086K2KMNR
+[2025-03-18T17:12:47.545+0000] {scrape.py:182} INFO - Scraping page 2
+[2025-03-18T17:12:59.467+0000] {scrape.py:88} INFO - Total products found after scrolling: 0
+[2025-03-18T17:12:59.611+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Best-Sellers-Beauty-Personal-Care-Skin-Care-Products/zgbs/beauty/11060451/ref=zg_bs_nav_beauty_1?pg=2
+[2025-03-18T17:12:59.623+0000] {scrape.py:140} INFO - Scraped 50 products from page 2
+[2025-03-18T17:12:59.966+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Bior%C3%A9-Blackhead-Unclogging-Technology-Non-Comedogenic/dp/B0009EILKS/ref=zg_bs_g_11060451_d_sccl_1/138-8806548-5327547?psc=1
+[2025-03-18T17:12:59.967+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Bior%C3%A9-Blackhead-Unclogging-Technology-Non-Comedogenic/dp/B0009EILKS/ref=zg_bs_g_11060451_d_sccl_1/138-8806548-5327547?psc=1
+[2025-03-18T17:13:08.481+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Bior%C3%A9-Blackhead-Unclogging-Technology-Non-Comedogenic/dp/B0009EILKS/ref=zg_bs_g_11060451_d_sccl_1/138-8806548-5327547?psc=1
+[2025-03-18T17:13:08.498+0000] {scrape.py:198} INFO - Scraped details for product B0009EILKS
+[2025-03-18T17:13:15.380+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Method-Body-Peace-Paraben-Phthalate/dp/B0BT1VXDGD/ref=zg_bs_g_11060451_d_sccl_2/138-8806548-5327547?psc=1
+[2025-03-18T17:13:15.381+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Method-Body-Peace-Paraben-Phthalate/dp/B0BT1VXDGD/ref=zg_bs_g_11060451_d_sccl_2/138-8806548-5327547?psc=1
+[2025-03-18T17:13:24.356+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Method-Body-Peace-Paraben-Phthalate/dp/B0BT1VXDGD/ref=zg_bs_g_11060451_d_sccl_2/138-8806548-5327547?psc=1
+[2025-03-18T17:13:24.372+0000] {scrape.py:198} INFO - Scraped details for product B0BT1VXDGD
+[2025-03-18T17:13:34.596+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Softsoap-Antibacterial-Liquid-Refill-White/dp/B081FFRGZB/ref=zg_bs_g_11060451_d_sccl_3/138-8806548-5327547?psc=1
+[2025-03-18T17:13:34.598+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Softsoap-Antibacterial-Liquid-Refill-White/dp/B081FFRGZB/ref=zg_bs_g_11060451_d_sccl_3/138-8806548-5327547?psc=1
+[2025-03-18T17:13:43.085+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Softsoap-Antibacterial-Liquid-Refill-White/dp/B081FFRGZB/ref=zg_bs_g_11060451_d_sccl_3/138-8806548-5327547?psc=1
+[2025-03-18T17:13:43.099+0000] {scrape.py:198} INFO - Scraped details for product B081FFRGZB
+[2025-03-18T17:13:48.603+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Burts-Bees-Moisturizing-Original-Peppermint/dp/B0054LHI5A/ref=zg_bs_g_11060451_d_sccl_4/138-8806548-5327547?psc=1
+[2025-03-18T17:13:48.604+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Burts-Bees-Moisturizing-Original-Peppermint/dp/B0054LHI5A/ref=zg_bs_g_11060451_d_sccl_4/138-8806548-5327547?psc=1
+[2025-03-18T17:13:57.342+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Burts-Bees-Moisturizing-Original-Peppermint/dp/B0054LHI5A/ref=zg_bs_g_11060451_d_sccl_4/138-8806548-5327547?psc=1
+[2025-03-18T17:13:57.363+0000] {scrape.py:198} INFO - Scraped details for product B0054LHI5A
+[2025-03-18T17:14:07.527+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Vanicream-Moisturizing-Sensitive-Irritated-Dermatologist/dp/B000NWGCZ2/ref=zg_bs_g_11060451_d_sccl_5/138-8806548-5327547?psc=1
+[2025-03-18T17:14:07.528+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Vanicream-Moisturizing-Sensitive-Irritated-Dermatologist/dp/B000NWGCZ2/ref=zg_bs_g_11060451_d_sccl_5/138-8806548-5327547?psc=1
+[2025-03-18T17:14:16.294+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Vanicream-Moisturizing-Sensitive-Irritated-Dermatologist/dp/B000NWGCZ2/ref=zg_bs_g_11060451_d_sccl_5/138-8806548-5327547?psc=1
+[2025-03-18T17:14:16.308+0000] {scrape.py:198} INFO - Scraped details for product B000NWGCZ2
+[2025-03-18T17:14:24.454+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Jergens-Natural-FIRMING-Moisturizer-Medium/dp/B001UTK76C/ref=zg_bs_g_11060451_d_sccl_6/138-8806548-5327547?psc=1
+[2025-03-18T17:14:24.455+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Jergens-Natural-FIRMING-Moisturizer-Medium/dp/B001UTK76C/ref=zg_bs_g_11060451_d_sccl_6/138-8806548-5327547?psc=1
+[2025-03-18T17:14:33.007+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Jergens-Natural-FIRMING-Moisturizer-Medium/dp/B001UTK76C/ref=zg_bs_g_11060451_d_sccl_6/138-8806548-5327547?psc=1
+[2025-03-18T17:14:33.022+0000] {scrape.py:198} INFO - Scraped details for product B001UTK76C
+[2025-03-18T17:14:39.199+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Terra-Lotus-Organic-Grass-Fed-Tallow/dp/B0CVW6NSD2/ref=zg_bs_g_11060451_d_sccl_7/138-8806548-5327547?psc=1
+[2025-03-18T17:14:39.200+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Terra-Lotus-Organic-Grass-Fed-Tallow/dp/B0CVW6NSD2/ref=zg_bs_g_11060451_d_sccl_7/138-8806548-5327547?psc=1
+[2025-03-18T17:14:47.449+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Terra-Lotus-Organic-Grass-Fed-Tallow/dp/B0CVW6NSD2/ref=zg_bs_g_11060451_d_sccl_7/138-8806548-5327547?psc=1
+[2025-03-18T17:14:47.465+0000] {scrape.py:198} INFO - Scraped details for product B0CVW6NSD2
+[2025-03-18T17:14:57.474+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Laneige-Sleeping-Berry/dp/B07XXPHQZK/ref=zg_bs_g_11060451_d_sccl_8/138-8806548-5327547?psc=1
+[2025-03-18T17:14:57.475+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Laneige-Sleeping-Berry/dp/B07XXPHQZK/ref=zg_bs_g_11060451_d_sccl_8/138-8806548-5327547?psc=1
+[2025-03-18T17:15:06.202+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Laneige-Sleeping-Berry/dp/B07XXPHQZK/ref=zg_bs_g_11060451_d_sccl_8/138-8806548-5327547?psc=1
+[2025-03-18T17:15:06.217+0000] {scrape.py:198} INFO - Scraped details for product B07XXPHQZK
+[2025-03-18T17:15:14.248+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Carroten-Tan-Express-Intensive-Tanning/dp/B00I51885U/ref=zg_bs_g_11060451_d_sccl_9/138-8806548-5327547?psc=1
+[2025-03-18T17:15:14.249+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Carroten-Tan-Express-Intensive-Tanning/dp/B00I51885U/ref=zg_bs_g_11060451_d_sccl_9/138-8806548-5327547?psc=1
+[2025-03-18T17:15:23.104+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Carroten-Tan-Express-Intensive-Tanning/dp/B00I51885U/ref=zg_bs_g_11060451_d_sccl_9/138-8806548-5327547?psc=1
+[2025-03-18T17:15:23.117+0000] {scrape.py:198} INFO - Scraped details for product B00I51885U
+[2025-03-18T17:15:31.143+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Rael-Hydrocolloid-Pimple-Healing-Patch/dp/B07G1VKCND/ref=zg_bs_g_11060451_d_sccl_10/138-8806548-5327547?psc=1
+[2025-03-18T17:15:31.144+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Rael-Hydrocolloid-Pimple-Healing-Patch/dp/B07G1VKCND/ref=zg_bs_g_11060451_d_sccl_10/138-8806548-5327547?psc=1
+[2025-03-18T17:15:39.710+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Rael-Hydrocolloid-Pimple-Healing-Patch/dp/B07G1VKCND/ref=zg_bs_g_11060451_d_sccl_10/138-8806548-5327547?psc=1
+[2025-03-18T17:15:39.726+0000] {scrape.py:198} INFO - Scraped details for product B07G1VKCND
+[2025-03-18T17:15:47.076+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Post-Acne-Refining-Resurfacing-Brightening/dp/B07VWSN95S/ref=zg_bs_g_11060451_d_sccl_11/138-8806548-5327547?psc=1
+[2025-03-18T17:15:47.077+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Post-Acne-Refining-Resurfacing-Brightening/dp/B07VWSN95S/ref=zg_bs_g_11060451_d_sccl_11/138-8806548-5327547?psc=1
+[2025-03-18T17:15:55.650+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Post-Acne-Refining-Resurfacing-Brightening/dp/B07VWSN95S/ref=zg_bs_g_11060451_d_sccl_11/138-8806548-5327547?psc=1
+[2025-03-18T17:15:55.675+0000] {scrape.py:198} INFO - Scraped details for product B07VWSN95S
+[2025-03-18T17:16:05.046+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/l-f-Moisturizing-Hyaluronic-Cruelty-free-Strawberry/dp/B0C7W6GW8P/ref=zg_bs_g_11060451_d_sccl_12/138-8806548-5327547?psc=1
+[2025-03-18T17:16:05.047+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/l-f-Moisturizing-Hyaluronic-Cruelty-free-Strawberry/dp/B0C7W6GW8P/ref=zg_bs_g_11060451_d_sccl_12/138-8806548-5327547?psc=1
+[2025-03-18T17:16:13.921+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/l-f-Moisturizing-Hyaluronic-Cruelty-free-Strawberry/dp/B0C7W6GW8P/ref=zg_bs_g_11060451_d_sccl_12/138-8806548-5327547?psc=1
+[2025-03-18T17:16:13.935+0000] {scrape.py:198} INFO - Scraped details for product B0C7W6GW8P
+[2025-03-18T17:16:21.181+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Summer-Fridays-Lip-Butter-Balm/dp/B0C42HJRBF/ref=zg_bs_g_11060451_d_sccl_13/138-8806548-5327547?psc=1
+[2025-03-18T17:16:21.182+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Summer-Fridays-Lip-Butter-Balm/dp/B0C42HJRBF/ref=zg_bs_g_11060451_d_sccl_13/138-8806548-5327547?psc=1
+[2025-03-18T17:16:29.851+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Summer-Fridays-Lip-Butter-Balm/dp/B0C42HJRBF/ref=zg_bs_g_11060451_d_sccl_13/138-8806548-5327547?psc=1
+[2025-03-18T17:16:29.863+0000] {scrape.py:198} INFO - Scraped details for product B0C42HJRBF
+[2025-03-18T17:16:37.706+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Thayers-Alcohol-Free-Petal-Formula-12-Facial/dp/B007HD570Q/ref=zg_bs_g_11060451_d_sccl_14/138-8806548-5327547?psc=1
+[2025-03-18T17:16:37.707+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Thayers-Alcohol-Free-Petal-Formula-12-Facial/dp/B007HD570Q/ref=zg_bs_g_11060451_d_sccl_14/138-8806548-5327547?psc=1
+[2025-03-18T17:16:46.408+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Thayers-Alcohol-Free-Petal-Formula-12-Facial/dp/B007HD570Q/ref=zg_bs_g_11060451_d_sccl_14/138-8806548-5327547?psc=1
+[2025-03-18T17:16:46.424+0000] {scrape.py:198} INFO - Scraped details for product B007HD570Q
+[2025-03-18T17:16:54.802+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Vanicream-Gentle-Cleanser-sensitive-Dispenser/dp/B00QY1XZ4W/ref=zg_bs_g_11060451_d_sccl_15/138-8806548-5327547?psc=1
+[2025-03-18T17:16:54.804+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Vanicream-Gentle-Cleanser-sensitive-Dispenser/dp/B00QY1XZ4W/ref=zg_bs_g_11060451_d_sccl_15/138-8806548-5327547?psc=1
+[2025-03-18T17:17:03.401+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Vanicream-Gentle-Cleanser-sensitive-Dispenser/dp/B00QY1XZ4W/ref=zg_bs_g_11060451_d_sccl_15/138-8806548-5327547?psc=1
+[2025-03-18T17:17:03.415+0000] {scrape.py:198} INFO - Scraped details for product B00QY1XZ4W
+[2025-03-18T17:17:14.556+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Olay-Lasting-Hydration-Ingredient-Luminous/dp/B0DMQ7J3YQ/ref=zg_bs_g_11060451_d_sccl_16/138-8806548-5327547?psc=1
+[2025-03-18T17:17:14.565+0000] {scrape.py:198} INFO - Scraped details for product B0DMQ7J3YQ
+[2025-03-18T17:17:24.119+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Daolyo-Hydrocolloid-Blemishes-Salicylic-Calendula/dp/B0CCRWC6W9/ref=zg_bs_g_11060451_d_sccl_17/138-8806548-5327547?psc=1
+[2025-03-18T17:17:24.120+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Daolyo-Hydrocolloid-Blemishes-Salicylic-Calendula/dp/B0CCRWC6W9/ref=zg_bs_g_11060451_d_sccl_17/138-8806548-5327547?psc=1
+[2025-03-18T17:17:32.979+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Daolyo-Hydrocolloid-Blemishes-Salicylic-Calendula/dp/B0CCRWC6W9/ref=zg_bs_g_11060451_d_sccl_17/138-8806548-5327547?psc=1
+[2025-03-18T17:17:32.993+0000] {scrape.py:198} INFO - Scraped details for product B0CCRWC6W9
+[2025-03-18T17:17:39.109+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Neutrogena-Ultra-Dry-Touch-Sunscreen-Spectrum/dp/B005IHT94S/ref=zg_bs_g_11060451_d_sccl_18/138-8806548-5327547?psc=1
+[2025-03-18T17:17:39.110+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Neutrogena-Ultra-Dry-Touch-Sunscreen-Spectrum/dp/B005IHT94S/ref=zg_bs_g_11060451_d_sccl_18/138-8806548-5327547?psc=1
+[2025-03-18T17:17:48.065+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Neutrogena-Ultra-Dry-Touch-Sunscreen-Spectrum/dp/B005IHT94S/ref=zg_bs_g_11060451_d_sccl_18/138-8806548-5327547?psc=1
+[2025-03-18T17:17:48.083+0000] {scrape.py:198} INFO - Scraped details for product B005IHT94S
+[2025-03-18T17:17:54.783+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Niacinamide-Tranexamic-Hyaluronic-Sensitive-Fragrance-Free/dp/B0CLLV2T1P/ref=zg_bs_g_11060451_d_sccl_19/138-8806548-5327547?psc=1
+[2025-03-18T17:17:54.784+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Niacinamide-Tranexamic-Hyaluronic-Sensitive-Fragrance-Free/dp/B0CLLV2T1P/ref=zg_bs_g_11060451_d_sccl_19/138-8806548-5327547?psc=1
+[2025-03-18T17:18:02.851+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Niacinamide-Tranexamic-Hyaluronic-Sensitive-Fragrance-Free/dp/B0CLLV2T1P/ref=zg_bs_g_11060451_d_sccl_19/138-8806548-5327547?psc=1
+[2025-03-18T17:18:02.869+0000] {scrape.py:198} INFO - Scraped details for product B0CLLV2T1P
+[2025-03-18T17:18:11.085+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Good-Molecules-Hyaluronic-Long-Lasting-Fragrance-free/dp/B08TM8DLFJ/ref=zg_bs_g_11060451_d_sccl_20/138-8806548-5327547?psc=1
+[2025-03-18T17:18:11.086+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Good-Molecules-Hyaluronic-Long-Lasting-Fragrance-free/dp/B08TM8DLFJ/ref=zg_bs_g_11060451_d_sccl_20/138-8806548-5327547?psc=1
+[2025-03-18T17:18:19.313+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Good-Molecules-Hyaluronic-Long-Lasting-Fragrance-free/dp/B08TM8DLFJ/ref=zg_bs_g_11060451_d_sccl_20/138-8806548-5327547?psc=1
+[2025-03-18T17:18:19.330+0000] {scrape.py:198} INFO - Scraped details for product B08TM8DLFJ
+[2025-03-18T17:18:27.156+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Aquaphor-Healing-Protectant-Avocado-Butter/dp/B09RYRCXKM/ref=zg_bs_g_11060451_d_sccl_21/138-8806548-5327547?psc=1
+[2025-03-18T17:18:27.157+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Aquaphor-Healing-Protectant-Avocado-Butter/dp/B09RYRCXKM/ref=zg_bs_g_11060451_d_sccl_21/138-8806548-5327547?psc=1
+[2025-03-18T17:18:35.936+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Aquaphor-Healing-Protectant-Avocado-Butter/dp/B09RYRCXKM/ref=zg_bs_g_11060451_d_sccl_21/138-8806548-5327547?psc=1
+[2025-03-18T17:18:35.951+0000] {scrape.py:198} INFO - Scraped details for product B09RYRCXKM
+[2025-03-18T17:18:43.782+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Irish-Spring-Original-Clean-Body/dp/B09GN1YRVP/ref=zg_bs_g_11060451_d_sccl_22/138-8806548-5327547?psc=1
+[2025-03-18T17:18:43.783+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Irish-Spring-Original-Clean-Body/dp/B09GN1YRVP/ref=zg_bs_g_11060451_d_sccl_22/138-8806548-5327547?psc=1
+[2025-03-18T17:18:52.397+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Irish-Spring-Original-Clean-Body/dp/B09GN1YRVP/ref=zg_bs_g_11060451_d_sccl_22/138-8806548-5327547?psc=1
+[2025-03-18T17:18:52.413+0000] {scrape.py:198} INFO - Scraped details for product B09GN1YRVP
+[2025-03-18T17:18:58.183+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/EltaMD-Moisturizer-Hyaluronic-Mineral-Based-Protection/dp/B00J5KDCO2/ref=zg_bs_g_11060451_d_sccl_23/138-8806548-5327547?psc=1
+[2025-03-18T17:18:58.184+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/EltaMD-Moisturizer-Hyaluronic-Mineral-Based-Protection/dp/B00J5KDCO2/ref=zg_bs_g_11060451_d_sccl_23/138-8806548-5327547?psc=1
+[2025-03-18T17:19:07.033+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/EltaMD-Moisturizer-Hyaluronic-Mineral-Based-Protection/dp/B00J5KDCO2/ref=zg_bs_g_11060451_d_sccl_23/138-8806548-5327547?psc=1
+[2025-03-18T17:19:07.051+0000] {scrape.py:198} INFO - Scraped details for product B00J5KDCO2
+[2025-03-18T17:19:16.901+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Getter-Multi-Oil-Hydrating-Naturium-Cleanser/dp/B0B1PDDLGZ/ref=zg_bs_g_11060451_d_sccl_24/138-8806548-5327547?psc=1
+[2025-03-18T17:19:16.902+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Getter-Multi-Oil-Hydrating-Naturium-Cleanser/dp/B0B1PDDLGZ/ref=zg_bs_g_11060451_d_sccl_24/138-8806548-5327547?psc=1
+[2025-03-18T17:19:25.432+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Getter-Multi-Oil-Hydrating-Naturium-Cleanser/dp/B0B1PDDLGZ/ref=zg_bs_g_11060451_d_sccl_24/138-8806548-5327547?psc=1
+[2025-03-18T17:19:25.444+0000] {scrape.py:198} INFO - Scraped details for product B0B1PDDLGZ
+[2025-03-18T17:19:33.179+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Gold-Bond-Corrector-Replenishing-Smoothing/dp/B09YZ16XCN/ref=zg_bs_g_11060451_d_sccl_25/138-8806548-5327547?psc=1
+[2025-03-18T17:19:33.180+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Gold-Bond-Corrector-Replenishing-Smoothing/dp/B09YZ16XCN/ref=zg_bs_g_11060451_d_sccl_25/138-8806548-5327547?psc=1
+[2025-03-18T17:19:42.156+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Gold-Bond-Corrector-Replenishing-Smoothing/dp/B09YZ16XCN/ref=zg_bs_g_11060451_d_sccl_25/138-8806548-5327547?psc=1
+[2025-03-18T17:19:42.171+0000] {scrape.py:198} INFO - Scraped details for product B09YZ16XCN
+[2025-03-18T17:19:53.653+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Aquaphor-Repair-Tube-Blister-Ounce/dp/B06XDCPYYL/ref=zg_bs_g_11060451_d_sccl_26/138-8806548-5327547?psc=1
+[2025-03-18T17:19:53.663+0000] {scrape.py:198} INFO - Scraped details for product B06XDCPYYL
+[2025-03-18T17:19:58.999+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Beauty-Joseon-Revive-eye-serum/dp/B0B45LL4DD/ref=zg_bs_g_11060451_d_sccl_27/138-8806548-5327547?psc=1
+[2025-03-18T17:19:59.000+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Beauty-Joseon-Revive-eye-serum/dp/B0B45LL4DD/ref=zg_bs_g_11060451_d_sccl_27/138-8806548-5327547?psc=1
+[2025-03-18T17:20:07.873+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Beauty-Joseon-Revive-eye-serum/dp/B0B45LL4DD/ref=zg_bs_g_11060451_d_sccl_27/138-8806548-5327547?psc=1
+[2025-03-18T17:20:07.886+0000] {scrape.py:198} INFO - Scraped details for product B0B45LL4DD
+[2025-03-18T17:20:13.480+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Cetaphil-Gentle-Makeup-Removing-Wipes/dp/B01M4NFD2N/ref=zg_bs_g_11060451_d_sccl_28/138-8806548-5327547?psc=1
+[2025-03-18T17:20:13.481+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Cetaphil-Gentle-Makeup-Removing-Wipes/dp/B01M4NFD2N/ref=zg_bs_g_11060451_d_sccl_28/138-8806548-5327547?psc=1
+[2025-03-18T17:20:22.695+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Cetaphil-Gentle-Makeup-Removing-Wipes/dp/B01M4NFD2N/ref=zg_bs_g_11060451_d_sccl_28/138-8806548-5327547?psc=1
+[2025-03-18T17:20:22.711+0000] {scrape.py:198} INFO - Scraped details for product B01M4NFD2N
+[2025-03-18T17:20:28.788+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/b-tan-Darkest-Sunless-Tanner-Possible/dp/B09B4F55NY/ref=zg_bs_g_11060451_d_sccl_29/138-8806548-5327547?psc=1
+[2025-03-18T17:20:28.789+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/b-tan-Darkest-Sunless-Tanner-Possible/dp/B09B4F55NY/ref=zg_bs_g_11060451_d_sccl_29/138-8806548-5327547?psc=1
+[2025-03-18T17:20:38.082+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/b-tan-Darkest-Sunless-Tanner-Possible/dp/B09B4F55NY/ref=zg_bs_g_11060451_d_sccl_29/138-8806548-5327547?psc=1
+[2025-03-18T17:20:38.096+0000] {scrape.py:198} INFO - Scraped details for product B09B4F55NY
+[2025-03-18T17:20:44.272+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Lume-Acidified-Body-Wash-Moisturizing/dp/B0BVYD2L5K/ref=zg_bs_g_11060451_d_sccl_30/138-8806548-5327547?psc=1
+[2025-03-18T17:20:44.273+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Lume-Acidified-Body-Wash-Moisturizing/dp/B0BVYD2L5K/ref=zg_bs_g_11060451_d_sccl_30/138-8806548-5327547?psc=1
+[2025-03-18T17:20:53.102+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Lume-Acidified-Body-Wash-Moisturizing/dp/B0BVYD2L5K/ref=zg_bs_g_11060451_d_sccl_30/138-8806548-5327547?psc=1
+[2025-03-18T17:20:53.115+0000] {scrape.py:198} INFO - Scraped details for product B0BVYD2L5K
+[2025-03-18T17:21:02.853+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/CeraVe-Treatment-Salicylic-Purifying-Blackhead/dp/B097WFJ5H2/ref=zg_bs_g_11060451_d_sccl_81/138-8806548-5327547?psc=1
+[2025-03-18T17:21:02.854+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/CeraVe-Treatment-Salicylic-Purifying-Blackhead/dp/B097WFJ5H2/ref=zg_bs_g_11060451_d_sccl_81/138-8806548-5327547?psc=1
+[2025-03-18T17:21:11.127+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/CeraVe-Treatment-Salicylic-Purifying-Blackhead/dp/B097WFJ5H2/ref=zg_bs_g_11060451_d_sccl_81/138-8806548-5327547?psc=1
+[2025-03-18T17:21:11.141+0000] {scrape.py:198} INFO - Scraped details for product B097WFJ5H2
+[2025-03-18T17:21:20.311+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/LOreal-Paris-Revitalift-Moisturizer-Hyaluronic/dp/B008EKY8VK/ref=zg_bs_g_11060451_d_sccl_82/138-8806548-5327547?psc=1
+[2025-03-18T17:21:20.312+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/LOreal-Paris-Revitalift-Moisturizer-Hyaluronic/dp/B008EKY8VK/ref=zg_bs_g_11060451_d_sccl_82/138-8806548-5327547?psc=1
+[2025-03-18T17:21:29.255+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/LOreal-Paris-Revitalift-Moisturizer-Hyaluronic/dp/B008EKY8VK/ref=zg_bs_g_11060451_d_sccl_82/138-8806548-5327547?psc=1
+[2025-03-18T17:21:29.270+0000] {scrape.py:198} INFO - Scraped details for product B008EKY8VK
+[2025-03-18T17:21:37.602+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dial-Antibacterial-liquid-spring-water/dp/B084MVWG1F/ref=zg_bs_g_11060451_d_sccl_83/138-8806548-5327547?psc=1
+[2025-03-18T17:21:37.603+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Dial-Antibacterial-liquid-spring-water/dp/B084MVWG1F/ref=zg_bs_g_11060451_d_sccl_83/138-8806548-5327547?psc=1
+[2025-03-18T17:21:46.322+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Dial-Antibacterial-liquid-spring-water/dp/B084MVWG1F/ref=zg_bs_g_11060451_d_sccl_83/138-8806548-5327547?psc=1
+[2025-03-18T17:21:46.335+0000] {scrape.py:198} INFO - Scraped details for product B084MVWG1F
+[2025-03-18T17:21:53.053+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dermactin-Crepe-Gone-Body-Souffle/dp/B0DJV6YB44/ref=zg_bs_g_11060451_d_sccl_84/138-8806548-5327547?psc=1
+[2025-03-18T17:21:53.054+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Dermactin-Crepe-Gone-Body-Souffle/dp/B0DJV6YB44/ref=zg_bs_g_11060451_d_sccl_84/138-8806548-5327547?psc=1
+[2025-03-18T17:22:01.712+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Dermactin-Crepe-Gone-Body-Souffle/dp/B0DJV6YB44/ref=zg_bs_g_11060451_d_sccl_84/138-8806548-5327547?psc=1
+[2025-03-18T17:22:01.724+0000] {scrape.py:198} INFO - Scraped details for product B0DJV6YB44
+[2025-03-18T17:22:09.374+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/EltaMD-Clear-Tinted-Sunscreen-Face/dp/B00ZPWR0N8/ref=zg_bs_g_11060451_d_sccl_85/138-8806548-5327547?psc=1
+[2025-03-18T17:22:09.375+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/EltaMD-Clear-Tinted-Sunscreen-Face/dp/B00ZPWR0N8/ref=zg_bs_g_11060451_d_sccl_85/138-8806548-5327547?psc=1
+[2025-03-18T17:22:17.834+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/EltaMD-Clear-Tinted-Sunscreen-Face/dp/B00ZPWR0N8/ref=zg_bs_g_11060451_d_sccl_85/138-8806548-5327547?psc=1
+[2025-03-18T17:22:17.852+0000] {scrape.py:198} INFO - Scraped details for product B00ZPWR0N8
+[2025-03-18T17:22:27.320+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Dove-Beauty-Sensitive-Skin-Count/dp/B001ET7IQK/ref=zg_bs_g_11060451_d_sccl_86/138-8806548-5327547?psc=1
+[2025-03-18T17:22:27.320+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Dove-Beauty-Sensitive-Skin-Count/dp/B001ET7IQK/ref=zg_bs_g_11060451_d_sccl_86/138-8806548-5327547?psc=1
+[2025-03-18T17:22:36.115+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Dove-Beauty-Sensitive-Skin-Count/dp/B001ET7IQK/ref=zg_bs_g_11060451_d_sccl_86/138-8806548-5327547?psc=1
+[2025-03-18T17:22:36.129+0000] {scrape.py:198} INFO - Scraped details for product B001ET7IQK
+[2025-03-18T17:22:45.132+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Method-Body-Wash-Surf-28oz/dp/B0BT1WN3ZD/ref=zg_bs_g_11060451_d_sccl_87/138-8806548-5327547?psc=1
+[2025-03-18T17:22:45.133+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Method-Body-Wash-Surf-28oz/dp/B0BT1WN3ZD/ref=zg_bs_g_11060451_d_sccl_87/138-8806548-5327547?psc=1
+[2025-03-18T17:22:53.664+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Method-Body-Wash-Surf-28oz/dp/B0BT1WN3ZD/ref=zg_bs_g_11060451_d_sccl_87/138-8806548-5327547?psc=1
+[2025-03-18T17:22:53.680+0000] {scrape.py:198} INFO - Scraped details for product B0BT1WN3ZD
+[2025-03-18T17:22:59.019+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Hawaiian-Tropic-Hydrating-Butter-Coconut/dp/B07BH4DD2M/ref=zg_bs_g_11060451_d_sccl_88/138-8806548-5327547?psc=1
+[2025-03-18T17:22:59.020+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Hawaiian-Tropic-Hydrating-Butter-Coconut/dp/B07BH4DD2M/ref=zg_bs_g_11060451_d_sccl_88/138-8806548-5327547?psc=1
+[2025-03-18T17:23:07.825+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Hawaiian-Tropic-Hydrating-Butter-Coconut/dp/B07BH4DD2M/ref=zg_bs_g_11060451_d_sccl_88/138-8806548-5327547?psc=1
+[2025-03-18T17:23:07.839+0000] {scrape.py:198} INFO - Scraped details for product B07BH4DD2M
+[2025-03-18T17:23:14.507+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Paris-Infallible-3-Second-Setting-Microfine/dp/B0CZF2T7CK/ref=zg_bs_g_11060451_d_sccl_89/138-8806548-5327547?psc=1
+[2025-03-18T17:23:14.509+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Paris-Infallible-3-Second-Setting-Microfine/dp/B0CZF2T7CK/ref=zg_bs_g_11060451_d_sccl_89/138-8806548-5327547?psc=1
+[2025-03-18T17:23:22.747+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Paris-Infallible-3-Second-Setting-Microfine/dp/B0CZF2T7CK/ref=zg_bs_g_11060451_d_sccl_89/138-8806548-5327547?psc=1
+[2025-03-18T17:23:22.759+0000] {scrape.py:198} INFO - Scraped details for product B0CZF2T7CK
+[2025-03-18T17:23:32.180+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Vibriance-Formula-Hydrates-Targets-Wrinkles/dp/B08L8B5JR2/ref=zg_bs_g_11060451_d_sccl_90/138-8806548-5327547?psc=1
+[2025-03-18T17:23:32.181+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Vibriance-Formula-Hydrates-Targets-Wrinkles/dp/B08L8B5JR2/ref=zg_bs_g_11060451_d_sccl_90/138-8806548-5327547?psc=1
+[2025-03-18T17:23:40.809+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Vibriance-Formula-Hydrates-Targets-Wrinkles/dp/B08L8B5JR2/ref=zg_bs_g_11060451_d_sccl_90/138-8806548-5327547?psc=1
+[2025-03-18T17:23:40.830+0000] {scrape.py:198} INFO - Scraped details for product B08L8B5JR2
+[2025-03-18T17:23:49.728+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLE7K/ref=zg_bs_g_11060451_d_sccl_91/138-8806548-5327547?psc=1
+[2025-03-18T17:23:49.728+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLE7K/ref=zg_bs_g_11060451_d_sccl_91/138-8806548-5327547?psc=1
+[2025-03-18T17:23:57.716+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Sun-Bum-Moisturizing-Protection-Hypoallergenic/dp/B004XGLE7K/ref=zg_bs_g_11060451_d_sccl_91/138-8806548-5327547?psc=1
+[2025-03-18T17:23:57.731+0000] {scrape.py:198} INFO - Scraped details for product B004XGLE7K
+[2025-03-18T17:24:05.858+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Neutrogena-HydroBoost-Hyaluronic-Pre-Moistened-Towelettes/dp/B07XC569XF/ref=zg_bs_g_11060451_d_sccl_92/138-8806548-5327547?psc=1
+[2025-03-18T17:24:05.859+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Neutrogena-HydroBoost-Hyaluronic-Pre-Moistened-Towelettes/dp/B07XC569XF/ref=zg_bs_g_11060451_d_sccl_92/138-8806548-5327547?psc=1
+[2025-03-18T17:24:14.747+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Neutrogena-HydroBoost-Hyaluronic-Pre-Moistened-Towelettes/dp/B07XC569XF/ref=zg_bs_g_11060451_d_sccl_92/138-8806548-5327547?psc=1
+[2025-03-18T17:24:14.762+0000] {scrape.py:198} INFO - Scraped details for product B07XC569XF
+[2025-03-18T17:24:24.565+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/dalba-Piedmont-Light-weight-Moisturizer-Comedogenic/dp/B0BFQ9RD5B/ref=zg_bs_g_11060451_d_sccl_93/138-8806548-5327547?psc=1
+[2025-03-18T17:24:24.566+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/dalba-Piedmont-Light-weight-Moisturizer-Comedogenic/dp/B0BFQ9RD5B/ref=zg_bs_g_11060451_d_sccl_93/138-8806548-5327547?psc=1
+[2025-03-18T17:24:33.347+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/dalba-Piedmont-Light-weight-Moisturizer-Comedogenic/dp/B0BFQ9RD5B/ref=zg_bs_g_11060451_d_sccl_93/138-8806548-5327547?psc=1
+[2025-03-18T17:24:33.361+0000] {scrape.py:198} INFO - Scraped details for product B0BFQ9RD5B
+[2025-03-18T17:24:42.159+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Cremo-Rich-Lathering-Italian-Bergamot-Blossom/dp/B0CMW64H59/ref=zg_bs_g_11060451_d_sccl_94/138-8806548-5327547?psc=1
+[2025-03-18T17:24:42.160+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Cremo-Rich-Lathering-Italian-Bergamot-Blossom/dp/B0CMW64H59/ref=zg_bs_g_11060451_d_sccl_94/138-8806548-5327547?psc=1
+[2025-03-18T17:24:51.145+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Cremo-Rich-Lathering-Italian-Bergamot-Blossom/dp/B0CMW64H59/ref=zg_bs_g_11060451_d_sccl_94/138-8806548-5327547?psc=1
+[2025-03-18T17:24:51.160+0000] {scrape.py:198} INFO - Scraped details for product B0CMW64H59
+[2025-03-18T17:25:00.141+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Maybelline-Dream-Fresh-Medium-Packaging/dp/B008C13146/ref=zg_bs_g_11060451_d_sccl_95/138-8806548-5327547?psc=1
+[2025-03-18T17:25:00.142+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Maybelline-Dream-Fresh-Medium-Packaging/dp/B008C13146/ref=zg_bs_g_11060451_d_sccl_95/138-8806548-5327547?psc=1
+[2025-03-18T17:25:08.619+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Maybelline-Dream-Fresh-Medium-Packaging/dp/B008C13146/ref=zg_bs_g_11060451_d_sccl_95/138-8806548-5327547?psc=1
+[2025-03-18T17:25:08.642+0000] {scrape.py:198} INFO - Scraped details for product B008C13146
+[2025-03-18T17:25:17.880+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/SOL-JANEIRO-Bum-Jet-Set/dp/B0B4HKNDLQ/ref=zg_bs_g_11060451_d_sccl_96/138-8806548-5327547?psc=1
+[2025-03-18T17:25:17.881+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/SOL-JANEIRO-Bum-Jet-Set/dp/B0B4HKNDLQ/ref=zg_bs_g_11060451_d_sccl_96/138-8806548-5327547?psc=1
+[2025-03-18T17:25:26.461+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/SOL-JANEIRO-Bum-Jet-Set/dp/B0B4HKNDLQ/ref=zg_bs_g_11060451_d_sccl_96/138-8806548-5327547?psc=1
+[2025-03-18T17:25:26.471+0000] {scrape.py:198} INFO - Scraped details for product B0B4HKNDLQ
+[2025-03-18T17:25:32.271+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Neutrogena-Hydro-Hyaluronic-Hydrating-Moisturizer/dp/B00NR1YQHM/ref=zg_bs_g_11060451_d_sccl_97/138-8806548-5327547?psc=1
+[2025-03-18T17:25:32.272+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Neutrogena-Hydro-Hyaluronic-Hydrating-Moisturizer/dp/B00NR1YQHM/ref=zg_bs_g_11060451_d_sccl_97/138-8806548-5327547?psc=1
+[2025-03-18T17:25:41.031+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Neutrogena-Hydro-Hyaluronic-Hydrating-Moisturizer/dp/B00NR1YQHM/ref=zg_bs_g_11060451_d_sccl_97/138-8806548-5327547?psc=1
+[2025-03-18T17:25:41.046+0000] {scrape.py:198} INFO - Scraped details for product B00NR1YQHM
+[2025-03-18T17:25:51.111+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/eos-Strawberry-Pomegranate-Raspberry-Products/dp/B0BNP3ZN4X/ref=zg_bs_g_11060451_d_sccl_98/138-8806548-5327547?psc=1
+[2025-03-18T17:25:51.114+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/eos-Strawberry-Pomegranate-Raspberry-Products/dp/B0BNP3ZN4X/ref=zg_bs_g_11060451_d_sccl_98/138-8806548-5327547?psc=1
+[2025-03-18T17:26:00.100+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/eos-Strawberry-Pomegranate-Raspberry-Products/dp/B0BNP3ZN4X/ref=zg_bs_g_11060451_d_sccl_98/138-8806548-5327547?psc=1
+[2025-03-18T17:26:00.118+0000] {scrape.py:198} INFO - Scraped details for product B0BNP3ZN4X
+[2025-03-18T17:26:09.244+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Bio-Oil-200ml-Multiuse-Skincare-6-7oz/dp/B00AREGVUM/ref=zg_bs_g_11060451_d_sccl_99/138-8806548-5327547?psc=1
+[2025-03-18T17:26:09.245+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Bio-Oil-200ml-Multiuse-Skincare-6-7oz/dp/B00AREGVUM/ref=zg_bs_g_11060451_d_sccl_99/138-8806548-5327547?psc=1
+[2025-03-18T17:26:17.565+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Bio-Oil-200ml-Multiuse-Skincare-6-7oz/dp/B00AREGVUM/ref=zg_bs_g_11060451_d_sccl_99/138-8806548-5327547?psc=1
+[2025-03-18T17:26:17.578+0000] {scrape.py:198} INFO - Scraped details for product B00AREGVUM
+[2025-03-18T17:26:25.320+0000] {scrape.py:110} INFO - Loaded page with requests: https://www.amazon.com/Jergens-Natural-Oil-Free-Moisturizer-Spectrum/dp/B001YTD3BE/ref=zg_bs_g_11060451_d_sccl_100/138-8806548-5327547?psc=1
+[2025-03-18T17:26:25.321+0000] {scrape.py:193} INFO - Breadcrumbs not found with requests, switching to Selenium for https://www.amazon.com/Jergens-Natural-Oil-Free-Moisturizer-Spectrum/dp/B001YTD3BE/ref=zg_bs_g_11060451_d_sccl_100/138-8806548-5327547?psc=1
+[2025-03-18T17:26:33.776+0000] {scrape.py:100} INFO - Loaded page with Selenium: https://www.amazon.com/Jergens-Natural-Oil-Free-Moisturizer-Spectrum/dp/B001YTD3BE/ref=zg_bs_g_11060451_d_sccl_100/138-8806548-5327547?psc=1
+[2025-03-18T17:26:33.788+0000] {scrape.py:198} INFO - Scraped details for product B001YTD3BE
+[2025-03-18T17:26:38.948+0000] {scrape.py:175} INFO - Saved 100 products to /opt/***/data/raw_20250318_170004.csv
+[2025-03-18T17:26:39.818+0000] {scrape.py:77} INFO - WebDriver closed successfully.
+[2025-03-18T17:26:39.854+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-03-18T17:26:39.855+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-18T17:26:39.863+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=amazon_etl_dag, task_id=scrape_amazon_data, run_id=scheduled__2025-03-18T16:00:00+00:00, execution_date=20250318T160000, start_date=20250318T170004, end_date=20250318T172639
+[2025-03-18T17:26:39.982+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-03-18T17:26:40.297+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-18T17:26:40.300+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
